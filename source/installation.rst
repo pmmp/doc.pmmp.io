@@ -43,10 +43,6 @@ Use ``curl`` or ``wget`` to install PocketMine-MP using the following command.
 
     **Do not run the installer as root, this is discouraged**.
 
-Installing on Android
----------------------
-
-Install `PocketMine-MP for Android`_ from the Google play.
 
 Installing manually
 -------------------
@@ -66,18 +62,18 @@ Using GitHub
 
 .. code::
 
-    $ git clone --recursive https://github.com/PocketMine/PocketMine-MP.git PocketMine-MP.git
-    Cloning into 'PocketMine-MP.git'...
+    $ git clone --recursive https://github.com/pmmp/pocketmine-mp.git pocketmine-mp.git
+    Cloning into 'pocketmine-mp.git'...
     remote: Counting objects: 34068, done.
     remote: Compressing objects: 100% (13/13), done.
     remote: Total 34068 (delta 2), reused 0 (delta 0), pack-reused 34055
     Receiving objects: 100% (34068/34068), 9.89 MiB | 1.79 MiB/s, done.
     Resolving deltas: 100% (25602/25602), done.
     Checking connectivity... done.
-    Submodule 'src/pocketmine/gui' (https://github.com/PocketMine/PocketMine-MP-GUI.git) registered for path 'src/pocketmine/gui'
-    Submodule 'src/raklib' (https://github.com/PocketMine/RakLib.git) registered for path 'src/raklib'
-    Submodule 'src/spl' (https://github.com/PocketMine/PocketMine-SPL.git) registered for path 'src/spl'
-    Submodule 'tests/TesterPlugin' (https://github.com/PocketMine/TesterPlugin.git) registered for path 'tests/TesterPlugin'
+    Submodule 'src/pocketmine/gui' (https://github.com/pmmp/pocketmine-mp-gui.git) registered for path 'src/pocketmine/gui'
+    Submodule 'src/raklib' (https://github.com/pmmp/raklib.git) registered for path 'src/raklib'
+    Submodule 'src/spl' (https://github.com/pmmp/pocketmine-spl.git) registered for path 'src/spl'
+    Submodule 'tests/TesterPlugin' (https://github.com/pmmp/testerplugin.git) registered for path 'tests/TesterPlugin'
     Cloning into 'src/pocketmine/gui'...
     remote: Counting objects: 26, done.
     remote: Compressing objects: 100% (21/21), done.
@@ -98,13 +94,13 @@ Using GitHub
     Unpacking objects: 100% (65/65), done.
     Checking connectivity... done.
     Submodule path 'src/spl': checked out '178d2a38f95d552fa5d91da26edc13a86d8054c6'
-    Cloning into 'tests/TesterPlugin'...
+    Cloning into 'tests/testerplugin'...
     remote: Counting objects: 8, done.
     remote: Compressing objects: 100% (2/2), done.
     remote: Total 8 (delta 2), reused 1 (delta 1), pack-reused 5
     Unpacking objects: 100% (8/8), done.
     Checking connectivity... done.
-    Submodule path 'tests/TesterPlugin': checked out '1a0dec97cc354a0b62b41c007caa6f84885b8263'
+    Submodule path 'tests/testerplugin': checked out '1a0dec97cc354a0b62b41c007caa6f84885b8263'
 
 Getting PHP and the start script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -116,11 +112,10 @@ Getting PHP and the start script
    * CentOS `Bintray <PHP-Bintray_>`_
    * Linux `Bintray <PHP-Bintray_>`_
    * Linux ARM `Bintray <PHP-Bintray_>`_
-   * Android `Bintray <PHP-Bintray_>`_
    * Raspbian `Bintray <PHP-Bintray_>`_
 
 2. Extract the PHP binary
-3. Download the `start.sh <https://raw.githubusercontent.com/PocketMine/PocketMine-MP/master/start.sh>`_
+3. Download the `start.sh <https://raw.githubusercontent.com/pmmp/pocketmine-mp/master/start.sh>`_
 4. Make start.sh executable (chmod +x start.sh)
 
 Starting for the first time
@@ -232,10 +227,9 @@ The server should have started now and you should be able to join.
 
 
 .. _Win-Bintray: https://bintray.com/pocketmine/PocketMine/Windows-PHP-Binaries/view#files
-.. _GitHub: https://github.com/PocketMine/PocketMine-MP/releases
+.. _GitHub: https://github.com/pmmp/pocketmine-mp/releases
 .. _PHP-Bintray: https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries/view#files
-.. _PM-Stable: https://github.com/PocketMine/PocketMine-MP/releases
-.. _PocketMine-MP for Android: https://play.google.com/store/apps/details?id=net.pocketmine.server
+.. _PM-Stable: https://github.com/pmmp/pocketmine-mp/releases
 .. _Crowdin: http://translate.pocketmine.net
-.. _License: https://github.com/PocketMine/PocketMine-MP/blob/master/LICENSE
+.. _License: https://github.com/pmmp/pocketmine-mp/blob/master/LICENSE
 .. _Phar-Bintray: https://bintray.com/pocketmine/PocketMine/PocketMine-MP-phar/view#files

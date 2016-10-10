@@ -20,7 +20,6 @@ Download the PHP binary for your OS:
 * `CentOS <PHP-Bintray_>`_
 * `Linux <PHP-Bintray_>`_
 * `Linux ARM <PHP-Bintray->`_
-* `Android <PHP-Bintray_>`_
 * `Raspbian <PHP-Bintray_>`_
 
 Update PocketMine-MP

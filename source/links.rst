@@ -6,9 +6,8 @@ PocketMine-MP
 
 * `PocketMine Website <https://www.pocketmine.net>`_
 * `PocketMine Forums <https://forums.pocketmine.net/>`_
-* `PocketMine GitHub <https://www.github.com/PocketMine/>`_
-* `PocketMine-MP GitHub <https://github.com/PocketMine/PocketMine-MP>`_
+* `PMMP GitHub <https://www.github.com/pmmp/>`_
+* `PocketMine-MP GitHub <https://github.com/pmmp/pocketmine-mp>`_
 * `PocketMine-MP Translation <http://translate.pocketmine.net/>`_
-* `PocketMine-MP Documentation <http://pocketmine-mp.readthedocs.org/en/latest/>`_
-* `PocketMine-MP Stable API Documentation <http://docs.pocketmine.net/>`_
+* `PocketMine-MP Documentation <http://pmmp.rtfd.org/en/latest/>`_
 * `PocketMine PHP Binaries <https://bintray.com/pocketmine/PocketMine/>`_
