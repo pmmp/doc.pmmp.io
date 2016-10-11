@@ -1,7 +1,7 @@
 PocketMine-MP Documentation
 ===========================
 
-PocketMine-MP Documentation for http://pocketmine-mp.readthedocs.org/
+PocketMine-MP Documentation for http://pmmp.readthedocs.org/
 
 Build local
 -----------
