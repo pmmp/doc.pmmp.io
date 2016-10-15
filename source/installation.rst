@@ -49,14 +49,6 @@ Installing manually
 
 Did the installer fail? It is not your taste? YOLO? DIY!
 
-Using .phar
-~~~~~~~~~~~
-
-1. Create a new directory for PocketMine-MP.
-2. Download PocketMine-MP.phar from `Bintray <Phar-Bintray_>`_.
-3. Rename the .phar to ``PocketMine-MP.phar``.
-4. Place it in the PocketMine-MP directory you just created.
-
 Using GitHub
 ~~~~~~~~~~~~
 
@@ -229,7 +221,5 @@ The server should have started now and you should be able to join.
 .. _Win-Bintray: https://bintray.com/pocketmine/PocketMine/Windows-PHP-Binaries/view#files
 .. _GitHub: https://github.com/pmmp/pocketmine-mp/releases
 .. _PHP-Bintray: https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries/view#files
-.. _PM-Stable: https://github.com/pmmp/pocketmine-mp/releases
 .. _Crowdin: http://translate.pocketmine.net
 .. _License: https://github.com/pmmp/pocketmine-mp/blob/master/LICENSE
-.. _Phar-Bintray: https://bintray.com/pocketmine/PocketMine/PocketMine-MP-phar/view#files
