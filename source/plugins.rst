@@ -50,7 +50,7 @@ api     Minimal PocketMine-MP API version required for your plugin (`current <ht
 	name: Example
 	main: Example\Example
 	version: 1.0.0
-	api: 2.0.0
+	api: 2.1.0
 
 Example.php
 +++++++++++
