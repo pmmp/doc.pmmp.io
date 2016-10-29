@@ -5,7 +5,7 @@ Installation
 Installing on Windows
 ---------------------
 
-There are PocketMine-MP Installers. Click either x64, or x86 to download your chosen one.
+These are PocketMine-MP Installers. Click either x64, or x86 to download your chosen one.
 
 - One for `x64 <https://github.com/NotPocketMine/Windows-PocketMine-MP/raw/master/PocketMine-MP-x64.exe>`_
 - One for `x86 <https://github.com/NotPocketMine/Windows-PocketMine-MP/raw/master/PocketMine-MP-x86.exe>`_
