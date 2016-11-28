@@ -1,5 +1,5 @@
-Failed loading opcache.so
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Failed loading opcache.so php7
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This will happen when the installer is not used or when PocketMine-MP was moved.
 This can be fixed with a single command.::

@@ -9,7 +9,7 @@ Installing on Windows
 Download the latest PHP binary from `Bintray <Win-Bintray_>`_.
 Use the installer to install PocketMine-MP.
 The installer may have an outdated version of PocketMine-MP.
-You can download the latest .phar from `Bintray <Phar-Bintray_>`_.
+You can download the latest .phar from `Jenkins <Phar-Jenkins_>`_.
 
 .. warning::
     If the provided x64 binary does not work then try the x86 binary.
@@ -23,8 +23,8 @@ Use ``curl`` or ``wget`` to install PocketMine-MP using the following command.
 
 .. code-block:: sh
 
-	curl -sL https://raw.githubusercontent.com/PocketMine/php-build-scripts/master/installer.sh | bash -s -
-	wget -q -O - https://raw.githubusercontent.com/PocketMine/php-build-scripts/master/installer.sh | bash -s -
+	curl -sL https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh | bash -s -
+	wget -q -O - https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh | bash -s -
 
 .. code-block:: sh
 
@@ -48,6 +48,14 @@ Installing manually
 -------------------
 
 Did the installer fail? It is not your taste? YOLO? DIY!
+
+Using .phar
+~~~~~~~~~~~
+
+1. Create a new directory for PocketMine-MP.
+2. Download PocketMine-MP.phar from `Jenkins <Phar-Jenkins_>`_.
+3. Rename the .phar to ``PocketMine-MP.phar``.
+4. Place it in the PocketMine-MP directory you just created.
 
 Using GitHub
 ~~~~~~~~~~~~
@@ -223,3 +231,4 @@ The server should have started now and you should be able to join.
 .. _PHP-Bintray: https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries/view#files
 .. _Crowdin: http://translate.pocketmine.net
 .. _License: https://github.com/pmmp/pocketmine-mp/blob/master/LICENSE
+.. _Phar-Jenkins: https://jenkins.pmmp.io/job/PocketMine-MP/lastSuccessfulBuild/
