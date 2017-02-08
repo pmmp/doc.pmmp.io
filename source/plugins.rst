@@ -2,7 +2,7 @@ Plugins
 =======
 **PocketMine is extendable!**
 
-Plugins are available on the `PocketMine website <http://forums.pocketmine.net/plugins/>`_ or you can make your own plugin.
+Plugins are available on `Poggit <https://poggit.pmmp.io/pi>`_  or you can make your own plugin.
 
 Below is an skeleton with the minimal needed directories, files and content.
 
@@ -83,7 +83,7 @@ Create .phar files
 ------------------
 
 The easiest way to release a plugin is in .phar format.
-To create a .phar you need `DevTools <https://github.com/PocketMine/DevTools/releases>`_.
+To create a .phar you need `DevTools <https://poggit.pmmp.io/p/DevTools/68>`_.
 
 1. Start PocketMine-MP
 2. Make sure the plugin is loaded. Look for ``Loading source plugin <plugin name>``
@@ -115,4 +115,4 @@ More examples
 Resources
 ---------
 
-* `Plugin Development forum <https://forums.pocketmine.net/forums/development/>`_
+* `Plugin Development forum <https://forums.pmmp.io/forums/development/>`_
