@@ -5,5 +5,5 @@ Contact and Support
 * `#pocketmine`_ for support @ chat.freenode.net
 
 
-.. _PocketMine Forums: http://forums.pocketmine.net
+.. _PocketMine Forums: https://forums.pmmp.io
 .. _#pocketmine: http://webchat.freenode.net/?channels=pmmp&uio=d4
