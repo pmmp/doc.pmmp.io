@@ -6,7 +6,7 @@ Commands
     name: Example
     main: Example\Example
     version: 1.0.0
-    api: 1.12.0
+    api: 2.1.0
 
     commands:
      example1:

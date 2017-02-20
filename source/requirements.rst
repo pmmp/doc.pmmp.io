@@ -22,4 +22,4 @@ Download links
 .. _Windows PHP binaries: https://bintray.com/pocketmine/PocketMine/Windows-PHP-Binaries/view#files
 .. _Linux/MacOS install script: https://raw.githubusercontent.com/PocketMine/php-build-scripts/master/installer.sh
 .. _Linux/MacOS PHP binaries: https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries/view#files
-.. _PocketMine-MP.phar: https://bintray.com/pocketmine/PocketMine/PocketMine-MP-phar/view#files
+.. _PocketMine-MP.phar: https://jenkins.pmmp.gq/job/PocketMine-MP/lastSuccessfulBuild/artifact/
