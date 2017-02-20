@@ -35,4 +35,4 @@ Update PocketMine-MP
 
 .. _Win-Bintray: https://bintray.com/pocketmine/PocketMine/Windows-PHP-Binaries/view#files
 .. _PHP-Bintray: https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries/view#files
-.. _PM-Stable: https://github.com/PocketMine/PocketMine-MP/releases
+.. _PM-Stable: https://github.com/pmmp/PocketMine-MP/releases

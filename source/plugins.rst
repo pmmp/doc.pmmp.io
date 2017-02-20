@@ -2,7 +2,7 @@ Plugins
 =======
 **PocketMine is extendable!**
 
-Plugins are available on the `PocketMine website <http://forums.pocketmine.net/plugins/>`_ or you can make your own plugin.
+Plugins are available on `Poggit <https://poggit.pmmp.io/pi>`_ or you can make your own plugin.
 
 Below is an skeleton with the minimal needed directories, files and content.
 
@@ -115,4 +115,4 @@ More examples
 Resources
 ---------
 
-* `Plugin Development forum <https://forums.pocketmine.net/forums/development/>`_
+* `Plugin Development forum <https://forums.pmmp.io/forums/development/>`_
