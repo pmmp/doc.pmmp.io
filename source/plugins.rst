@@ -83,7 +83,7 @@ Create .phar files
 ------------------
 
 The easiest way to release a plugin is in .phar format.
-To create a .phar you need `DevTools <https://poggit.pmmp.io/p/DevTools/68>`_.
+To create a .phar you need `DevTools <https://github.com/PocketMine/DevTools/releases>`_.
 
 1. Start PocketMine-MP
 2. Make sure the plugin is loaded. Look for ``Loading source plugin <plugin name>``
