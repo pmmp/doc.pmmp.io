@@ -18,6 +18,8 @@ If a version is not listed here, it usually either means that there were no prot
 +-------------------+------------------+
 | Minecraft version | Protocol version |
 +===================+==================+
+| v1.0.4.1          | 102              |
++-------------------+------------------+
 | v1.0.3.0          | 101              |
 +-------------------+------------------+
 | v1.0.0.0          | 100              |
