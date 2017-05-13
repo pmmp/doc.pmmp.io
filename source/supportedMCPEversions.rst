@@ -9,15 +9,27 @@ Running the ``version`` command outputs:
 .. code-block:: none
 
     This server is running PocketMine-MP 1.6.2dev 「Unleashed」
-    implementing API version 3.0.0-ALPHA3 
-    for Minecraft: PE v1.0.3.0 (protocol version 101)
+    implementing API version 3.0.0-ALPHA5 
+    for Minecraft: PE v1.0.7.0 (protocol version 107)
 
-The game version reported by the server is the minimum supported version. Newer **patch** versions of the game are often compatible with older versions, but not always. 
+The game version reported by the server is the minimum supported version. Newer **patch** versions of the game are sometimes compatible with older versions, so before asking for an updated version, try and see if you can connect to your current server first.
 If a version is not listed here, it usually either means that there were no protocol changes between the listed versions, so look at the newest entry before your version.
 
 +-------------------+------------------+
 | Minecraft version | Protocol version |
 +===================+==================+
+| v1.1.0.9          | 112              |
++-------------------+------------------+
+| v1.1.0.8          | 111              |
++-------------------+------------------+
+| v1.1.0.0          | 110              |
++-------------------+------------------+
+| v1.0.7.0          | 107              |
++-------------------+------------------+
+| v1.0.6.0          | 106              |
++-------------------+------------------+
+| v1.0.5.0          | 105              |
++-------------------+------------------+
 | v1.0.4.1          | 102              |
 +-------------------+------------------+
 | v1.0.3.0          | 101              |
