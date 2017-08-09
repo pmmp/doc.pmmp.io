@@ -13,7 +13,7 @@ Commands
       description: "Example1 command"
       usage: "/example1"
      example2:
-      descroption "Example2 command with arguments"
+      description: "Example2 command with arguments"
       usage: "/example2 <args>"
 
 
@@ -29,7 +29,7 @@ Commands
 
     class Example extends PluginBase{
 
-        public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
+        public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool {
             switch($command->getName()) {
                 case "example1":
                     // do stuff
