@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'PocketMine-MP'
-copyright = u'2016, PocketMine Team'
+copyright = u'2017, PocketMine Team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -281,7 +281,7 @@ texinfo_documents = [
 epub_title = u'PocketMine-MP'
 epub_author = u'PocketMine Team'
 epub_publisher = u'PocketMine'
-epub_copyright = u'2016, PocketMine'
+epub_copyright = u'2017, PocketMine'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'MCPE Tools'
