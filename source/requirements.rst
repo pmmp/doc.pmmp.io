@@ -16,6 +16,9 @@ We officially try to support Windows, Linux and MacOS platforms. However, in gen
 .. error::
 	PocketMine-MP is not supported on 32-bit systems.
 
+.. warning::
+	Windows additionally requires *Microsoft Visual C++ 2015 Redistributable* to be installed for PHP to run. You can download it from the `Microsoft website`_.
+
 Download links
 --------------
 
@@ -26,6 +29,7 @@ Download links
 * `MacOS PHP binaries`_
 
 .. _compile scripts: https://github.com/pmmp/php-build-scripts
+.. _Microsoft website: https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads
 .. _Linux/MacOS install script: https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh
 .. _Windows PHP binaries: https://ci.appveyor.com/project/pmmp/php-build-scripts/build/artifacts
 .. _Linux PHP binaries: https://jenkins.pmmp.io/job/PHP-7.0-Linux-x86_64/
