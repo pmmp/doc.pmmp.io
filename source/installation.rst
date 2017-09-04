@@ -3,28 +3,19 @@
 Installation
 ============
 
-Installing on Windows
----------------------
-
-Download the latest PHP binary from `Bintray <Win-Bintray_>`_.
-Use the installer to install PocketMine-MP.
-The installer may have an outdated version of PocketMine-MP.
-You can download the latest .phar from `Jenkins <Phar-Jenkins_>`_.
-
-.. warning::
-    If the provided x64 binary does not work then try the x86 binary.
-
-Installing on Linux/MacOS
--------------------------
+Using https://get.pmmp.io (Linux/MacOS only)
+--------------------------------------------
 .. warning::
     Only works on Linux or MacOS.
 
-Use ``curl`` or ``wget`` to install PocketMine-MP using the following command.
+Create a directory which you want to install PocketMine-MP into, and ``cd`` into it.
+
+Then use ``curl`` or ``wget`` to install PocketMine-MP using the following command:
 
 .. code-block:: sh
 
-	curl -sL https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh | bash -s -
-	wget -q -O - https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh | bash -s -
+    curl -sL https://get.pmmp.io | bash -s -
+    wget -q -O - https://get.pmmp.io | bash -s -
 
 .. code-block:: sh
 
@@ -44,86 +35,103 @@ Use ``curl`` or ``wget`` to install PocketMine-MP using the following command.
     **Do not run the installer as root, this is discouraged**.
 
 
+
 Installing manually
 -------------------
 
-Did the installer fail? It is not your taste? YOLO? DIY!
+No installer available for your platform? Did the installer fail? It is not your taste? YOLO? DIY!
+
+Getting PocketMine-MP
+~~~~~~~~~~~~~~~~~~~~~
 
 Using .phar
-~~~~~~~~~~~
+***********
 
 1. Create a new directory for PocketMine-MP.
-2. Download PocketMine-MP.phar from `Jenkins <Phar-Jenkins_>`_.
+2. Download PocketMine-MP.phar (`downloads`_)
 3. Rename the .phar to ``PocketMine-MP.phar``.
 4. Place it in the PocketMine-MP directory you just created.
+5. Get the start script for your platform (`Windows CMD <https://github.com/pmmp/PocketMine-MP/blob/master/start.cmd>`_, `Windows PowerShell <https://github.com/pmmp/PocketMine-MP/blob/master/start.ps1>`_, `Linux/MacOS bash <https://github.com/pmmp/PocketMine-MP/blob/master/start.sh>`_)
+6. (Linux/MacOS only) Make start.sh executable (chmod +x start.sh)
 
-Using GitHub
-~~~~~~~~~~~~
+Using Git
+*********
+
+You can also run PocketMine-MP from source code by cloning the GitHub repository using Git.
+
+.. warning::
+    Remember to clone with the ``--recursive`` flag! PocketMine-MP has several submodules which are required to run the server.
+
+    If you forgot the ``--recursive`` flag when you cloned, you can cd into the server directory and run ``git submodule update --init --recursive``.
 
 .. code::
 
-    $ git clone --recursive https://github.com/pmmp/pocketmine-mp.git pocketmine-mp.git
-    Cloning into 'pocketmine-mp.git'...
-    remote: Counting objects: 34068, done.
-    remote: Compressing objects: 100% (13/13), done.
-    remote: Total 34068 (delta 2), reused 0 (delta 0), pack-reused 34055
-    Receiving objects: 100% (34068/34068), 9.89 MiB | 1.79 MiB/s, done.
-    Resolving deltas: 100% (25602/25602), done.
-    Checking connectivity... done.
-    Submodule 'src/pocketmine/gui' (https://github.com/pmmp/pocketmine-mp-gui.git) registered for path 'src/pocketmine/gui'
-    Submodule 'src/raklib' (https://github.com/pmmp/raklib.git) registered for path 'src/raklib'
-    Submodule 'src/spl' (https://github.com/pmmp/pocketmine-spl.git) registered for path 'src/spl'
-    Submodule 'tests/TesterPlugin' (https://github.com/pmmp/testerplugin.git) registered for path 'tests/TesterPlugin'
-    Cloning into 'src/pocketmine/gui'...
-    remote: Counting objects: 26, done.
-    remote: Compressing objects: 100% (21/21), done.
-    remote: Total 26 (delta 4), reused 26 (delta 4), pack-reused 0
-    Unpacking objects: 100% (26/26), done.
-    Checking connectivity... done.
-    Submodule path 'src/pocketmine/gui': checked out 'b551c3d58ec2fd9fa0f3c92d36fcbaa5c70467f7'
-    Cloning into 'src/raklib'...
-    remote: Counting objects: 577, done.
-    remote: Total 577 (delta 0), reused 0 (delta 0), pack-reused 577
-    Receiving objects: 100% (577/577), 141.29 KiB | 0 bytes/s, done.
-    Resolving deltas: 100% (432/432), done.
-    Checking connectivity... done.
-    Submodule path 'src/raklib': checked out '660bdff07d85c0270e57da2a5ce69eff2a87649a'
-    Cloning into 'src/spl'...
-    remote: Counting objects: 65, done.
-    remote: Total 65 (delta 0), reused 0 (delta 0), pack-reused 65
-    Unpacking objects: 100% (65/65), done.
-    Checking connectivity... done.
-    Submodule path 'src/spl': checked out '178d2a38f95d552fa5d91da26edc13a86d8054c6'
-    Cloning into 'tests/testerplugin'...
-    remote: Counting objects: 8, done.
-    remote: Compressing objects: 100% (2/2), done.
-    remote: Total 8 (delta 2), reused 1 (delta 1), pack-reused 5
-    Unpacking objects: 100% (8/8), done.
-    Checking connectivity... done.
-    Submodule path 'tests/testerplugin': checked out '1a0dec97cc354a0b62b41c007caa6f84885b8263'
+    $ git clone https://github.com/pmmp/pocketmine-mp.git --recursive
+    Cloning into 'pocketmine-mp'...
+    remote: Counting objects: 59454, done.
+    remote: Compressing objects: 100% (72/72), done.
+    remote: Total 59454 (delta 50), reused 58 (delta 27), pack-reused 59355
+    Receiving objects: 100% (59454/59454), 16.80 MiB | 7.10 MiB/s, done.
+    Resolving deltas: 100% (45352/45352), done.
+    Submodule 'src/pocketmine/lang/locale' (https://github.com/pmmp/PocketMine-Language.git) registered for path 'src/pocketmine/lang/locale'
+    Submodule 'src/raklib' (https://github.com/pmmp/RakLib.git) registered for path 'src/raklib'
+    Submodule 'src/spl' (https://github.com/pmmp/PocketMine-SPL.git) registered for path 'src/spl'
+    Submodule 'tests/plugins/PocketMine-DevTools' (https://github.com/pmmp/PocketMine-DevTools.git) registered for path 'tests/plugins/PocketMine-DevTools'
+    Submodule 'tests/plugins/PocketMine-TesterPlugin' (https://github.com/pmmp/PocketMine-TesterPlugin.git) registered for path 'tests/plugins/PocketMine-TesterPlugin'
+    Submodule 'tests/preprocessor' (https://github.com/pmmp/preprocessor.git) registered for path 'tests/preprocessor'
+    Cloning into 'pocketmine-mp/src/pocketmine/lang/locale'...
+    remote: Counting objects: 780, done.
+    remote: Compressing objects: 100% (15/15), done.
+    remote: Total 780 (delta 7), reused 12 (delta 3), pack-reused 762
+    Receiving objects: 100% (780/780), 565.86 KiB | 698.00 KiB/s, done.
+    Resolving deltas: 100% (540/540), done.
+    Cloning into 'pocketmine-mp/src/raklib'...
+    remote: Counting objects: 1067, done.
+    remote: Compressing objects: 100% (3/3), done.
+    remote: Total 1067 (delta 0), reused 1 (delta 0), pack-reused 1064
+    Receiving objects: 100% (1067/1067), 256.44 KiB | 575.00 KiB/s, done.
+    Resolving deltas: 100% (821/821), done.
+    Cloning into 'pocketmine-mp/src/spl'...
+    remote: Counting objects: 185, done.
+    remote: Compressing objects: 100% (6/6), done.
+    remote: Total 185 (delta 3), reused 4 (delta 1), pack-reused 178
+    Receiving objects: 100% (185/185), 52.43 KiB | 310.00 KiB/s, done.
+    Resolving deltas: 100% (130/130), done.
+    Cloning into 'pocketmine-mp/tests/plugins/PocketMine-DevTools'...
+    remote: Counting objects: 409, done.
+    remote: Total 409 (delta 0), reused 0 (delta 0), pack-reused 409
+    Receiving objects: 100% (409/409), 78.78 KiB | 393.00 KiB/s, done.
+    Resolving deltas: 100% (176/176), done.
+    Cloning into 'pocketmine-mp/tests/plugins/PocketMine-TesterPlugin'...
+    remote: Counting objects: 145, done.
+    remote: Total 145 (delta 0), reused 0 (delta 0), pack-reused 145
+    Receiving objects: 100% (145/145), 22.51 KiB | 4.50 MiB/s, done.
+    Resolving deltas: 100% (72/72), done.
+    Cloning into 'pocketmine-mp/tests/preprocessor'...
+    remote: Counting objects: 196, done.
+    remote: Total 196 (delta 0), reused 0 (delta 0), pack-reused 196
+    Receiving objects: 100% (196/196), 30.39 KiB | 349.00 KiB/s, done.
+    Resolving deltas: 100% (124/124), done.
+    Submodule path 'src/pocketmine/lang/locale': checked out '9868a649ad9151d9724298b4fcf3345eab9ea409'
+    Submodule path 'src/raklib': checked out '97d2faf6928014ff953922d030f67b1e8b046dd7'
+    Submodule path 'src/spl': checked out 'a5127b224ec35ef6f54d0eae2a69a02d53842640'
+    Submodule path 'tests/plugins/PocketMine-DevTools': checked out '4ade26741e8050de196e4c12af01b8b42e76e6e7'
+    Submodule path 'tests/plugins/PocketMine-TesterPlugin': checked out 'd4f3d38e42b6962b85fcd72dcf52a3e2650005a6'
+    Submodule path 'tests/preprocessor': checked out '893b61f722f2b14b8a4ca5063eff5d89039b0b62'
 
-Getting PHP and the start script
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Getting PHP for your server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Downlad your flavor PHP binary.
-
-   * Windows `Bintray <Bintray_>`_
-   * MacOS `Bintray <PHP-Bintray_>`_
-   * CentOS `Bintray <PHP-Bintray_>`_
-   * Linux `Bintray <PHP-Bintray_>`_
-   * Linux ARM `Bintray <PHP-Bintray_>`_
-   * Raspbian `Bintray <PHP-Bintray_>`_
-
-2. Extract the PHP binary
-3. Download the `start.sh <https://raw.githubusercontent.com/pmmp/pocketmine-mp/master/start.sh>`_
-4. Make start.sh executable (chmod +x start.sh)
+1. Download your flavor PHP binary (`downloads`_)
+2. Extract the PHP binary into your server directory. If everything went well, you should have a `bin` folder in your server directory.
+3. (Windows only) Download and install Microsoft Visual C++ Redistributable 2017 (`downloads`_)
 
 Starting for the first time
 ---------------------------
+- Linux/MacOS: run ``./start.sh``
+- Windows: Double-click ``start.cmd``, or open PowerShell in the server directory and run ``.\start.ps1``.
 
-Now you should be able to start PocketMine-MP.
-The first time it starts with a set-up wizard,
-this can be disabled by running ``./start.sh --no-wizard``.
+The first time PocketMine-MP starts, it launches a set-up wizard. This can be disabled by running ``./start.sh --no-wizard``.
 
 .. code::
 
@@ -182,10 +190,8 @@ You can skip the wizard from here and start the server with the default settings
     [?] Give a name to your server (Minecraft: PE Server):
     [*] Do not change the default port value if this is your first server.
     [?] Server port (19132):
-    [*] The RAM is the maximum amount of memory PocketMine-MP will use. A value of 128-256 MB is recommended
-    [?] Server RAM in MB (256):
     [*] Choose between Creative (1) or Survival (0)
-    [?] Default Game mode: (0):
+    [?] Default Game mode (0):
     [?] Max. online players (20):
     [*] The spawn protection disallows placing/breaking blocks in the spawn zone except for OPs
     [?] Enable spawn protection? (Y/n):
@@ -200,35 +206,34 @@ You can skip the wizard from here and start the server with the default settings
     [*] RCON is a protocol to remote connect with the server console using a password.
     [?] Do you want to enable RCON? (y/N):
     [*] Getting your external IP and internal IP
-    [!] Your external IP is 87.212.35.149. You may have to port-forward to your internal IP 192.168.0.150
+    [!] Your external IP is [your external IP]. You may have to port-forward to your internal IP [your internal IP]
     [!] Be sure to check it, if you have to forward and you skip that, no external players will be able to join. [Press Enter]
+
     [*] You have finished the set-up wizard correctly
     [*] Check the Plugin Repository to add new features, minigames, or advanced protection to your server
     [*] PocketMine-MP will now start. Type /help to view the list of available commands.
 
-    [Server thread/INFO]: Loading pocketmine.yml...
-    [Server thread/INFO]: Loading server properties...
-    [Server thread/INFO]: Selected English (eng) as the base language
-    [Server thread/INFO]: Starting Minecraft: PE server version v0.11.0 alpha
-    [Server thread/NOTICE]: The memory-limit setting has been deprecated.
-    [Server thread/NOTICE]: There are new memory settings on pocketmine.yml to tune memory and events.
-    [Server thread/NOTICE]: You can also reduce the amount of threads and chunks loaded control the memory usage.
-    [Server thread/INFO]: Opening server on 0.0.0.0:19132
-    [Server thread/INFO]: This server is running PocketMine-MP version 1.5dev-1254 "活発(Kappatsu)フグ(Fugu)" (API 1.12.0)
-    [Server thread/INFO]: PocketMine-MP is distributed under the LGPL License
-    [Server thread/INFO]: Preparing level "world"
-    [Server thread/INFO]: Starting GS4 status listener
-    [Server thread/INFO]: Setting query port to 19132
-    [Server thread/INFO]: Query running on 0.0.0.0:19132
-    [Server thread/INFO]: Default game type: Survival Mode
-    [Server thread/INFO]: Done (19.485s)! For help, type "help" or "?"
+    [10:18:38] [Server thread/INFO]: Loading pocketmine.yml...
+    [10:18:38] [Server thread/INFO]: Loading server properties...
+    [10:18:38] [Server thread/INFO]: Selected English (eng) as the base language
+    [10:18:38] [Server thread/INFO]: Starting Minecraft: PE server version v1.1.0.55
+    [10:18:38] [Server thread/INFO]: Opening server on 0.0.0.0:19132
+    [10:18:38] [Server thread/INFO]: This server is running PocketMine-MP version 1.7dev "[REDACTED]" (API 3.0.0-ALPHA7)
+    [10:18:38] [Server thread/INFO]: PocketMine-MP is distributed under the LGPL License
+    [10:18:38] [Server thread/INFO]: Loading recipes...
+    [10:18:38] [Server thread/INFO]: Loading resource packs...
+    [10:18:39] [Server thread/NOTICE]: Level "world" not found
+    [10:18:39] [Server thread/INFO]: Preparing level "world"
+    [10:18:39] [Server thread/NOTICE]: Spawn terrain for level "world" is being generated in the background
+    [10:18:39] [Server thread/INFO]: Starting GS4 status listener
+    [10:18:39] [Server thread/INFO]: Setting query port to 19132
+    [10:18:39] [Server thread/INFO]: Query running on 0.0.0.0:19132
+    [10:18:39] [Server thread/INFO]: Default game type: Survival Mode
+    [10:18:39] [Server thread/INFO]: Done (59.006s)! For help, type "help" or "?"
 
 The server should have started now and you should be able to join.
 
-
-.. _Win-Bintray: https://bintray.com/pocketmine/PocketMine/Windows-PHP-Binaries/view#files
+.. _downloads: links.html#downloads
 .. _GitHub: https://github.com/pmmp/pocketmine-mp/releases
-.. _PHP-Bintray: https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries/view#files
 .. _Crowdin: http://translate.pocketmine.net
 .. _License: https://github.com/pmmp/pocketmine-mp/blob/master/LICENSE
-.. _Phar-Jenkins: https://jenkins.pmmp.io/job/PocketMine-MP/lastSuccessfulBuild/

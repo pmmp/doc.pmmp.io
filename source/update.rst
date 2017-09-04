@@ -4,8 +4,21 @@ Updating
 ========
 
 .. contents::
-	:local:
-	:depth: 2
+    :local:
+    :depth: 2
+
+Update using the installer (Linux/MacOS only)
+---------------------------------------------
+You can also use the installer on these platforms to update your installation. Passing the ``-u`` flag will update the PocketMine-MP installation.
+
+cd into your server directory.
+Then use ``curl`` or ``wget`` to install PocketMine-MP using the following command:
+
+.. code-block:: sh
+
+    curl -sL https://get.pmmp.io | bash -s - -u
+    wget -q -O - https://get.pmmp.io | bash -s - -u
+
 
 Manually update
 ---------------
@@ -13,26 +26,35 @@ Manually update
 Update PHP binary
 +++++++++++++++++
 
-Download the PHP binary for your OS:
+1. Download the PHP binary for your OS (`downloads`_)
+2. Delete the ``bin`` directory in your server folder.
+3. Extract the new PHP binary. You should see a new ``bin`` directory has been created.
 
-* `Windows <Win-Bintray_>`_
-* `MacOS <PHP-Bintray_>`_
-* `CentOS <PHP-Bintray_>`_
-* `Linux <PHP-Bintray_>`_
-* `Linux ARM <PHP-Bintray->`_
-* `Raspbian <PHP-Bintray_>`_
+Updating PocketMine-MP
+++++++++++++++++++++++
 
-Update PocketMine-MP
-++++++++++++++++++++
+Updating using .phar
+~~~~~~~~~~~~~~~~~~~~
+This is very straightforward.
 
-* Download the .phar matching your MCPE version from :ref:`here <supportedMCPEversions>`.
-* Change the name to ``PocketMine-MP.phar``
-* Place it in the server folder
-* Start the server and make sure the versions match
+1. Delete your current PocketMine-MP.phar
+2. Download the updated PocketMine-MP phar you want to use (`downloads`_)
+3. Change the name to ``PocketMine-MP.phar``
+4. Place it in the server folder
 
 .. note:: Don't forget to rename the file to ``PocketMine-MP.phar``
 
 
-.. _Win-Bintray: https://bintray.com/pocketmine/PocketMine/Windows-PHP-Binaries/view#files
-.. _PHP-Bintray: https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries/view#files
-.. _PM-Stable: https://github.com/pmmp/PocketMine-MP/releases
+Updating a Git installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you used Git to install, updating is very simple.
+
+cd into the server directory and run the following:
+
+.. code-block:: sh
+
+    git pull
+    git submodule update
+
+
+.. _downloads: links.html#downloads
