@@ -19,4 +19,4 @@ We officially try to support Windows, Linux and MacOS platforms. However, in gen
 	Windows additionally requires *Microsoft Visual C++ 2017 Redistributable* to be installed for PHP to run.
 
 .. note::
-	Download links can be found `here <downloads.html>`_.
+	Download links can be found `here <links.html#downloads>`_.
