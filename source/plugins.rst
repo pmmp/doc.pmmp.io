@@ -6,8 +6,12 @@ Plugins are available on `Poggit <https://poggit.pmmp.io/pi>`_ or you can make y
 
 Below is an skeleton with the minimal needed directories, files and content.
 
+
 .. note::
-    To run plugins from source or `create .phar files`_ you need `DevTools <https://github.com/PocketMine/DevTools/releases>`_.
+    This example was last updated for API **3.0.0-ALPHA7** and may be outdated and/or not work correctly. Please feel free to make a GitHub pull request if you find problems with it.
+
+.. note::
+    To run plugins from source or `create .phar files`_ you need the `DevTools`_ plugin.
 
 Basic plugin structure
 ----------------------
@@ -83,7 +87,7 @@ Create .phar files
 ------------------
 
 The easiest way to release a plugin is in .phar format.
-To create a .phar you need `DevTools <https://github.com/PocketMine/DevTools/releases>`_.
+To create a .phar you need `DevTools`_.
 
 1. Start PocketMine-MP
 2. Make sure the plugin is loaded. Look for ``Loading source plugin <plugin name>``
@@ -116,3 +120,5 @@ Resources
 ---------
 
 * `Plugin Development forum <https://forums.pmmp.io/forums/development/>`_
+
+.. _DevTools: https://github.com/pmmp/pocketmine-devtools
