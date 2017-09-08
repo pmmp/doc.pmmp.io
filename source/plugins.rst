@@ -46,7 +46,7 @@ field   data
 name    The name for your plugin
 main    The namespace and classname pointing to your main plugin class. It is case sensitive
 version The version string of your plugin
-api     Minimal PocketMine-MP API version required for your plugin (`current <https://github.com/pmmp/pocketmine-mp/search?utf8=✓&q=filename%3APocketMine.php+%22const+API_VERSION%22&type=Code>`_)
+api     Minimum PocketMine-MP API version required for your plugin (`current <https://github.com/pmmp/pocketmine-mp/search?utf8=✓&q=filename%3APocketMine.php+%22const+API_VERSION%22&type=Code>`_)
 ======= ====================================================================================
 
 .. code-block:: yaml
