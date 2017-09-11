@@ -29,7 +29,7 @@ MacOS
 Windows
 *******
 .. note::
-	All Windows builds can be found on AppVeyor. The build versions are in the format ``php-[php major version]-appveyor[build#]``, for example ``php-7.2-appveyor95``. Get the latest build with the PHP version you want.
+	All Windows builds can be found on AppVeyor. The build versions are in the format ``php-[php major version]-appveyor[build#]``, for example ``php-7.2-appveyor95``. Click the latest build with the PHP version you want, click Artifacts and download the zip.
 
 
 - `PHP (AppVeyor) <https://ci.appveyor.com/project/pmmp/php-build-scripts/history>`_
