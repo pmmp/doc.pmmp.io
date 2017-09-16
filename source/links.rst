@@ -4,11 +4,31 @@ Links
 Downloads
 =========
 
-All platforms
-~~~~~~~~~~~~~
-* `PocketMine-MP prebuilt phar <https://jenkins.pmmp.io/job/PocketMine-MP>`_
-* `DevTools prebuilt phar <https://jenkins.pmmp.io/job/PocketMine-MP>`_
+PocketMine-MP prebuilt phars
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+There are 4 available channels for downloads (ordered least stable to most stable):
 
+- `Development (least stable, produced for every commit to master) <https://jenkins.pmmp.io/job/PocketMine-MP/Development/>`_
+- `Alpha (not finished, may be unstable) <https://jenkins.pmmp.io/job/PocketMine-MP/Alpha>`_
+- `Beta (may be unstable) <https://jenkins.pmmp.io/job/PocketMine-MP/Beta/>`_
+- `Stable <https://jenkins.pmmp.io/job/PocketMine-MP/Stable/>`_
+
+You are recommended to take the most stable build which is compatible with your Minecraft version. You can see the compatible Minecraft version and other information by looking at the ``build_info.json`` file in the artifacts.
+
+.. warning::
+	**Do not use development builds** unless there is no other option available, since these will undergo breaking changes without notice from build to build.
+	You are recommended to use Alpha, Beta or Stable builds, as those are in a known state and all the changes for those are fully documented.
+
+.. note::
+	The links above may yield "404 Not Found" if no build is available in that channel.
+	At the time of writing, only Development and Alpha builds are currently available since PocketMine-MP is currently under heavy development. You are currently recommended to take Alpha builds or better.
+
+.. note::
+	Compatible DevTools phars are also shipped in every PocketMine-MP build from our Jenkins server.
+
+
+Linux & MacOS installer script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * `Linux & MacOS install script source <https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh>`_
 
 Prebuilt PHP binaries and related packages
