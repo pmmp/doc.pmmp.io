@@ -9,7 +9,7 @@ PocketMine-MP prebuilt phars
 There are 4 available channels for downloads (ordered least stable to most stable):
 
 - `Development (least stable, produced for every commit to master) <https://jenkins.pmmp.io/job/PocketMine-MP/Development/>`_
-- `Alpha (not finished, may be unstable) <https://jenkins.pmmp.io/job/PocketMine-MP/Alpha>`_
+- `Alpha (lacking planned features, may be unstable) <https://jenkins.pmmp.io/job/PocketMine-MP/Alpha>`_
 - `Beta (may be unstable) <https://jenkins.pmmp.io/job/PocketMine-MP/Beta/>`_
 - `Stable <https://jenkins.pmmp.io/job/PocketMine-MP/Stable/>`_
 
