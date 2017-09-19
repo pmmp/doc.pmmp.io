@@ -1,6 +1,8 @@
 Links
 -----
 
+.. _downloads:
+
 Downloads
 =========
 

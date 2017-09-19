@@ -44,9 +44,9 @@ No installer available for your platform? Did the installer fail? It is not your
 Getting PHP for your server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Download your flavor PHP binary (`downloads`_)
+1. Download your flavor PHP binary (:ref:`Downloads <downloads>`)
 2. Extract the PHP binary into your server directory. If everything went well, you should have a `bin` folder in your server directory.
-3. (Windows only) Download and install Microsoft Visual C++ Redistributable 2017 (`downloads`_)
+3. (Windows only) Download and install Microsoft Visual C++ Redistributable 2017 (:ref:`Downloads <downloads>`)
 
 Getting PocketMine-MP
 ~~~~~~~~~~~~~~~~~~~~~
@@ -55,7 +55,7 @@ Using .phar
 ***********
 
 1. Create a new directory for PocketMine-MP.
-2. Download PocketMine-MP.phar (`downloads`_)
+2. Download PocketMine-MP.phar (:ref:`Downloads <downloads>`)
 3. Rename the .phar to ``PocketMine-MP.phar``.
 4. Place it in the PocketMine-MP directory you just created.
 5. Get the start script for your platform (`Windows CMD <https://github.com/pmmp/PocketMine-MP/blob/master/start.cmd>`_, `Windows PowerShell <https://github.com/pmmp/PocketMine-MP/blob/master/start.ps1>`_, `Linux/MacOS bash <https://github.com/pmmp/PocketMine-MP/blob/master/start.sh>`_)
@@ -182,7 +182,6 @@ You can skip the wizard from here and start the server with the default settings
 
 The server should have started now and you should be able to join.
 
-.. _downloads: links.html#downloads
 .. _GitHub: https://github.com/pmmp/pocketmine-mp/releases
 .. _Crowdin: http://translate.pocketmine.net
 .. _License: https://github.com/pmmp/pocketmine-mp/blob/master/LICENSE
