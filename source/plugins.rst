@@ -121,4 +121,6 @@ Resources
 
 * `Plugin Development forum <https://forums.pmmp.io/forums/development/>`_
 
+* `Doxygen API docs <https://jenkins.pmmp.io/job/PocketMine-MP-doc/doxygen/>`_
+
 .. _DevTools: https://github.com/pmmp/pocketmine-devtools
