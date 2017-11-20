@@ -53,5 +53,8 @@ cd into the server directory and run the following:
 
 .. code-block:: sh
 
-    git pull
-    git submodule update
+    git pull # get the latest source from GitHub
+    git submodule update # update submodules to the required versions
+    composer install [... optional extra composer flags] # install/update dependencies managed by Composer
+
+See :ref:`Installing using Git <install-using-git>` for more details.
