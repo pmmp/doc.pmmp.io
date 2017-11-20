@@ -58,3 +58,8 @@ cd into the server directory and run the following:
     composer install [... optional extra composer flags] # install/update dependencies managed by Composer
 
 See :ref:`Installing using Git <install-using-git>` for more details.
+
+.. note::
+    Previous versions of PocketMine-MP used submodules ``src/spl`` and ``src/raklib``, which have now been removed. These submodules need to be manually deleted in your local installation.
+
+    To do so, delete the ``spl`` and ``raklib`` directories in the ``src`` directory, and then re-run Composer.
