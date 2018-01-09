@@ -38,14 +38,9 @@ Prebuilt PHP binaries and related packages
 .. note::
 	If there are no prebuilt binaries of the version you want available for your platform, you may be able to build your own using our `compile scripts`_.
 
-Linux
-*****
-- `PHP 7.2 <https://jenkins.pmmp.io/job/PHP-7.2-Linux-x86_64/>`_
-- `PHP 7.0 (legacy) <https://jenkins.pmmp.io/job/PHP-7.0-Linux-x86_64/>`_
-
-MacOS
-*****
-- PHP 7.2 - No PHP 7.2 prebuilt binaries are available for MacOS yet.
+Linux & MacOS
+*************
+- `PHP 7.2 <https://jenkins.pmmp.io/job/PHP-7.2-Aggregate/>`_
 - `PHP 7.0 (legacy) <https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries/view#files>`_
 
 Windows
