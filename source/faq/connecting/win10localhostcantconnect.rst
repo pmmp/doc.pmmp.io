@@ -1,7 +1,7 @@
 Can't connect to localhost Win10 server with Minecraft Win10 Edition
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Launch Window PowerShell as an administrator and run the following:
+This issue occurs due to loopback restrictions on Windows 10 UWP apps. To lift this restriction, launch Windows PowerShell as an administrator and run the following:
 
 .. code-block:: sh
 

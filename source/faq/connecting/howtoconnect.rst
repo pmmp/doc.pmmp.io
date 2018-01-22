@@ -1,15 +1,11 @@
-How do I connect to a server
-""""""""""""""""""""""""""""
-
-.. image:: /img/faq_connect-1.png
-.. image:: /img/faq_connect-2.png
-.. image:: /img/faq_connect-3.png
-
-Fill in the server details and you should be ready to go!
-
-.. image:: /img/faq_connect-4.png
+How do I add an external server which is not on my network?
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+To connect to a server by IP/address and port, you need to add it to the Servers list.
 
 
+.. image:: /img/add-server-1.png
+.. image:: /img/add-server-2.png
+.. image:: /img/add-server-3.png
 
 .. note::
-    A local server should show up on the Play screen without adding the details.
+    A local server should show up on the ``Friends`` tab without adding the details.

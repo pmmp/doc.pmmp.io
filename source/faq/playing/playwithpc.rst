@@ -1,4 +1,4 @@
-Can PC Minecraft clients connect to this server
-"""""""""""""""""""""""""""""""""""""""""""""""
+Can Minecraft: Java Edition (PC) clients connect to a PocketMine-MP server?
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-No
+No, but plugins exist which add partial support for this. Look up "BigBrother" on GitHub.

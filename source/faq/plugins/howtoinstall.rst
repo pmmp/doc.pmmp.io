@@ -1,4 +1,5 @@
-How do I install plugins
-""""""""""""""""""""""""
+How do I install plugins?
+"""""""""""""""""""""""""
 
-Download the ``.phar`` file and move it to the ``plugins`` folder.
+PocketMine-MP plugins are usually distributed as ``.phar`` files (``PHP Archive``).
+Download the ``.phar`` file for the plugin and move it to the ``plugins`` folder.
