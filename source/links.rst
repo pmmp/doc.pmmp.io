@@ -38,19 +38,12 @@ Prebuilt PHP binaries and related packages
 .. note::
 	If there are no prebuilt binaries of the version you want available for your platform, you may be able to build your own using our `compile scripts`_.
 
-Linux & MacOS
-*************
+Linux, Windows & MacOS
+**********************
 - `PHP 7.2 <https://jenkins.pmmp.io/job/PHP-7.2-Aggregate/>`_
-- `PHP 7.0 (legacy) <https://bintray.com/pocketmine/PocketMine/Unix-PHP-Binaries/view#files>`_
 
-Windows
-*******
-.. note::
-	All Windows builds can be found on AppVeyor. The build versions are in the format ``php-[php major version]-appveyor[build#]``, for example ``php-7.2-appveyor95``. Click the latest build with the PHP version you want, click Artifacts and download the zip.
-
-
-- `PHP (AppVeyor) <https://ci.appveyor.com/project/pmmp/php-build-scripts/history>`_
-- `Microsoft Visual C++ 2017 Redistributable <https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads>`_
+.. error::
+	**Windows users**: Don't forget to install `Microsoft Visual C++ 2017 Redistributable <https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads>`_, or the PHP binary will not work.
 
 
 Other links
