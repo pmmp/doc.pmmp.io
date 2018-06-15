@@ -1,8 +1,3 @@
-.. _requirements:
-
-Requirements
-============
-
 Setup requirements
 ------------------
 * PHP 7.2 64-bit with the extensions needed for PocketMine-MP
@@ -18,5 +13,3 @@ We officially try to support Windows, Linux and MacOS platforms. However, in gen
 .. warning::
 	Windows additionally requires *Microsoft Visual C++ 2017 Redistributable* to be installed for PHP to run.
 
-.. note::
-	Download links can be found :ref:`here <downloads>`.

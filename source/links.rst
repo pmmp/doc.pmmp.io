@@ -8,26 +8,11 @@ Downloads
 
 PocketMine-MP prebuilt phars
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-There are 4 available channels for downloads (ordered least stable to most stable):
+- `GitHub Releases <https://github.com/pmmp/PocketMine-MP/releases>`_ - Downloads of PocketMine-MP release phars can be found here.
+- `Jenkins server <https://jenkins.pmmp.io>`_ - Advanced users and/or developers may wish to use Jenkins to download development and/or pre-release builds (not recommended for most users).
 
-- `Development (least stable, produced for every commit to master) <https://jenkins.pmmp.io/job/PocketMine-MP/Development/>`_
-- `Alpha (lacking planned features, may be unstable) <https://jenkins.pmmp.io/job/PocketMine-MP/Alpha>`_
-- `Beta (may be unstable) <https://jenkins.pmmp.io/job/PocketMine-MP/Beta/>`_
-- `Stable <https://jenkins.pmmp.io/job/PocketMine-MP/Stable/>`_
-
-You are recommended to take the most stable build which is compatible with your Minecraft version. You can see the compatible Minecraft version and other information by looking at the ``build_info.json`` file in the artifacts.
-
-.. warning::
-	**Do not use development builds** unless there is no other option available, since these will undergo breaking changes without notice from build to build.
-	You are recommended to use Alpha, Beta or Stable builds, as those are in a known state and all the changes for those are fully documented.
-
-.. note::
-	The links above may yield "404 Not Found" if no build is available in that channel.
-	At the time of writing, only Development and Alpha builds are currently available since PocketMine-MP is currently under heavy development. You are currently recommended to take Alpha builds or better.
-
-.. note::
-	Compatible DevTools phars are also shipped in every PocketMine-MP build from our Jenkins server.
-
+.. error::
+    Please AVOID using development builds where possible.
 
 Linux & MacOS installer script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

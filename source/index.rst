@@ -8,11 +8,9 @@ PocketMine Documentation
     :maxdepth: 2
 
     intro
-    requirements
-    supportedMCPEversions
     installation
-    configuration
     update
+    configuration
     faq
     developers
     plugins
