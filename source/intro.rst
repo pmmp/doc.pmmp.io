@@ -5,7 +5,7 @@ Introduction
 .. image:: img/PocketMine.png
 	:align: center
 
-PocketMine-MP is a server software for Minecraft PE (Pocket Edition).
+PocketMine-MP is a server software for the Bedrock family of Minecraft editions (formerly known as Pocket Edition, Windows 10 Edition and others).
 It has a :doc:`Plugin API <plugins>` that enables a :doc:`developer <developers>` to extend it and add new features, or change default ones.
 
 Supported features
