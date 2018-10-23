@@ -6,7 +6,7 @@ RakLib Thread Blocked x.x.x.x for x seconds
 +=============+==================================================+
 | 5 seconds   | Error on a normal MCPE packet                    |
 +-------------+--------------------------------------------------+
-| 300 seconds | More then 5000 packets per tick from one address |
+| 300 seconds | More than 5000 packets per tick from one address |
 +-------------+--------------------------------------------------+
 | 600 seconds | Errors on external packet (like Query or RCON)   |
 +-------------+--------------------------------------------------+
