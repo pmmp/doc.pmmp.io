@@ -5,11 +5,16 @@ Using https://get.pmmp.io (Linux/MacOS only)
 
 Create a directory which you want to install PocketMine-MP into, and ``cd`` into it.
 
-Then use ``curl`` or ``wget`` to install PocketMine-MP using the following command:
+Then use ``curl`` to install PocketMine-MP using the following command:
 
 .. code-block:: sh
 
     curl -sL https://get.pmmp.io | bash -s -
+
+or, if you don't have ``curl``, try ``wget``:
+
+.. code-block:: sh
+
     wget -q -O - https://get.pmmp.io | bash -s -
 
 .. code-block:: sh
