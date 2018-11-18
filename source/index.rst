@@ -12,8 +12,6 @@ PocketMine Documentation
     update
     configuration
     faq
-    developers
-    plugins
     issues
     contact
     links
