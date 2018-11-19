@@ -1,7 +1,5 @@
 Setup requirements
 ------------------
-* PHP 7.2 64-bit with the extensions needed for PocketMine-MP
-* Latest PocketMine-MP phar compatible with your MCPE version
 * Dual-core or better processor is recommended. For best performance choose high clock frequency over core count
 * 1GB RAM or better
 
