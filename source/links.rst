@@ -20,16 +20,13 @@ Linux & MacOS installer script
 
 Prebuilt PHP binaries and related packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. note::
-	If there are no prebuilt binaries of the version you want available for your platform, you may be able to build your own using our `compile scripts`_.
-
 Linux, Windows & MacOS
 **********************
 - `PHP 7.2 <https://jenkins.pmmp.io/job/PHP-7.2-Aggregate/>`_
+- (Windows only) `Microsoft Visual C++ 2017 Redistributable <https://aka.ms/vs/15/release/vc_redist.x64.exe>`_
 
-.. error::
-	**Windows users**: Don't forget to install `Microsoft Visual C++ 2017 Redistributable <https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads>`_, or the PHP binary will not work.
-
+.. note::
+	If there are no prebuilt binaries of the version you want available for your platform, you may be able to build your own using our `compile scripts`_.
 
 Other links
 ===========
