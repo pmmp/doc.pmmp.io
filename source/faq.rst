@@ -2,7 +2,7 @@ FAQ
 ---
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 160
 
     faq/installation.rst
     faq/connecting.rst
