@@ -1,7 +1,9 @@
 Contact and Support
 -------------------
 
-* `PocketMine Forums`_
+* `Forums`_
+* `Community Discord`_
 
 
-.. _PocketMine Forums: https://forums.pmmp.io
+.. _Forums: https://forums.pmmp.io
+.. _Community Discord: https://discord.gg/bge7dYQ
