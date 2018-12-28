@@ -1,13 +1,16 @@
 Setup requirements
 ------------------
-* Dual-core or better processor is recommended. For best performance choose high clock frequency over core count
+A computer or device with the following is required:
+
+* 64-bit CPU
+* 64-bit operating system
 * 1GB RAM or better
 
+The following are not requirements, but recommended:
+
+* Dual-core or better CPU
+
+.. note::
+	PocketMine-MP is notoriously bad at multi-core usage. If purchasing a machine to run PocketMine-MP on, prefer higher CPU frequency instead of lots of cores.
+
 We officially try to support Windows, Linux and MacOS platforms. However, in general any platform which will run 64-bit PHP with the required extensions will work.
-
-.. error::
-	PocketMine-MP is not supported on 32-bit systems.
-
-.. warning::
-	Windows additionally requires *Microsoft Visual C++ 2017 Redistributable* to be installed for PHP to run.
-
