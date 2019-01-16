@@ -47,12 +47,9 @@ pocketmine.yml
     # Main configuration file for PocketMine-MP
     # These settings are the ones that cannot be included in server.properties
     # Some of these settings are safe, others can break your server if modified incorrectly
-    # New settings/defaults won't appear automatically on this file when upgrading.
+    # New settings/defaults won't appear automatically in this file when upgrading.
 
     settings:
-     #Three-letter language code for server-side localization
-     #Check your language code on https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes
-     language: "eng"
      #Whether to send all strings translated to server locale or let the device handle them
      force-language: false
      shutdown-message: "Server closed"
@@ -69,15 +66,27 @@ pocketmine.yml
      #Set this approximately to your number of cores.
      #If set to auto, it'll try to detect the number of cores (or use 2)
      async-workers: auto
+     #Whether to allow running development builds. Dev builds might crash, break your plugins, corrupt your world and more.
+     #It is recommended to avoid using development builds where possible.
+     enable-dev-builds: false
 
     memory:
      #Global soft memory limit in megabytes. Set to 0 to disable
      #This will trigger low-memory-triggers and fire an event to free memory when the usage goes over this
-     global-limit: 512
+     global-limit: 0
 
      #Main thread soft memory limit in megabytes. Set to 0 to disable
      #This will trigger low-memory-triggers and fire an event to free memory when the usage goes over this
-     main-limit: 320
+     main-limit: 0
+
+     #Main thread hard memory limit in megabytes. Set to 0 to disable
+     #This will stop the server when the limit is surpassed
+     main-hard-limit: 1024
+
+     #AsyncWorker threads' hard memory limit in megabytes. Set to 0 to disable
+     #This will crash the task currently executing on the worker if the task exceeds the limit
+     #NOTE: THIS LIMIT APPLIES PER WORKER, NOT TO THE WHOLE PROCESS.
+     async-worker-hard-limit: 256
 
      #Period in ticks to check memory (default 1 second)
      check-rate: 20
@@ -90,7 +99,7 @@ pocketmine.yml
 
      garbage-collection:
       #Period in ticks to fire the garbage collector manually (default 30 minutes), set to 0 to disable
-      #This only affect the main thread. Other threads should fire their own collections
+      #This only affects the main thread. Other threads should fire their own collections
       period: 36000
 
       #Fire asynchronous tasks to collect garbage from workers
@@ -99,18 +108,22 @@ pocketmine.yml
       #Trigger on low memory
       low-memory-trigger: true
 
+     #Settings controlling memory dump handling.
+     memory-dump:
+      #Dump memory from async workers as well as the main thread. If you have issues with segfaults when dumping memory, disable this setting.
+      dump-async-worker: true
+
      max-chunks:
-      #Limit of chunks to load per player, overrides chunk-sending.max-chunks
-      trigger-limit: 96
+      #Cap maximum render distance per player when low memory is triggered. Set to 0 to disable cap.
+      chunk-radius: 4
 
       #Do chunk garbage collection on trigger
       trigger-chunk-collect: true
 
-      #Trigger on low memory
-      low-memory-trigger: true
-
      world-caches:
+      #Disallow adding to world chunk-packet caches when memory is low
       disable-chunk-cache: true
+      #Clear world caches when memory is low
       low-memory-trigger: true
 
 
@@ -124,19 +137,24 @@ pocketmine.yml
      async-compression: false
      #Experimental, only for Windows. Tries to use UPnP to automatically port forward
      upnp-forwarding: false
+     #Maximum size in bytes of packets sent over the network (default 1492 bytes). Packets larger than this will be
+     #fragmented or split into smaller parts. Clients can request MTU sizes up to but not more than this number.
+     max-mtu-size: 1492
 
     debug:
      #If > 1, it will show debug messages in the console
      level: 1
-     #Enables /status, /gc
-     commands: false
+
+    player:
+     #Choose whether to enable player data saving.
+     save-player-data: true
+     anti-cheat:
+      #If false, will try to prevent speed and noclip cheats. May cause movement issues.
+      allow-movement-cheats: true
 
     level-settings:
      #The default format that levels will use when created
-     default-format: mcregion
-     #If true, converts from a format that is not the default to the default format on load
-     #NOTE: This is currently not implemented
-     convert-format: false
+     default-format: pmanvil
      #Automatically change levels tick rate to maintain 20 ticks per second
      auto-tick-rate: true
      auto-tick-rate-limit: 20
@@ -146,15 +164,11 @@ pocketmine.yml
      always-tick-players: false
 
     chunk-sending:
+     #To change server normal render distance, change view-distance in server.properties.
      #Amount of chunks sent to players per tick
      per-tick: 4
-     #Amount of chunks sent around each player
-     max-chunks: 192
-     #Amount of chunks that need to be sent before spawning the player
-     spawn-threshold: 56
-     #Save a serialized copy of the chunk in memory for faster sending
-     #Useful in mostly-static worlds where lots of players join at the same time
-     cache-chunks: false
+     #Radius of chunks that need to be sent before spawning the player
+     spawn-radius: 4
 
     chunk-ticking:
      #Max amount of chunks processed each tick
@@ -163,24 +177,16 @@ pocketmine.yml
      tick-radius: 3
      light-updates: false
      clear-tick-list: true
+     #IDs of blocks not to perform random ticking on.
+     disable-block-ticking:
+      #- 2 # grass
 
     chunk-generation:
-     #Max. amount of chunks in the waiting queue to be generated
-     queue-size: 8
      #Max. amount of chunks in the waiting queue to be populated
      population-queue-size: 8
 
     ticks-per:
-     animal-spawns: 400
-     monster-spawns: 1
      autosave: 6000
-     cache-cleanup: 900
-
-    spawn-limits:
-      monsters: 70
-      animals: 15
-      water-animals: 5
-      ambient: 15
 
     auto-report:
      #Send crash reports for processing
@@ -188,11 +194,12 @@ pocketmine.yml
      send-code: true
      send-settings: true
      send-phpinfo: false
-     host: crash.pocketmine.net
+     use-https: true
+     host: crash.pmmp.io
 
     anonymous-statistics:
      #Sends anonymous statistics for data aggregation, plugin usage tracking
-     enabled: true
+     enabled: false #TODO: re-enable this when we have a new stats host
      host: stats.pocketmine.net
 
     auto-updater:
@@ -200,11 +207,20 @@ pocketmine.yml
      on-update:
       warn-console: true
       warn-ops: true
-     #Can be development, beta or stable.
-     preferred-channel: beta
+     #Can be development, alpha, beta or stable.
+     preferred-channel: stable
      #If using a development version, it will suggest changing the channel
      suggest-channels: true
-     host: www.pocketmine.net
+     host: update.pmmp.io
+
+    timings:
+     #Choose the host to use for viewing your timings results.
+     host: timings.pmmp.io
+
+    console:
+     #Choose whether to enable server stats reporting on the console title.
+     #NOTE: The title ticker will be disabled regardless if console colours are not enabled.
+     title-tick: true
 
     aliases:
      #Examples:
@@ -217,3 +233,9 @@ pocketmine.yml
      #world:
      # seed: 404
      # generator: FLAT:2;7,59x1,3x3,2;1;decoration(treecount=80 grasscount=45)
+
+    plugins:
+     #Setting this to true will cause the legacy structure to be used where plugin data is placed inside the --plugins dir.
+     #False will place plugin data under plugin_data under --data.
+     #This option exists for backwards compatibility with existing installations.
+     legacy-data-dir: false
