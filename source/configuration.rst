@@ -13,20 +13,16 @@ server.properties
 
 .. code::
 
-    server-name=Minecraft: PE Server
+    #Properties Config file
+    #Wed Jan 16 09:32:51 GMT 2019
+    language=eng
+    motd=PocketMine-MP Server
     server-port=19132
-    memory-limit=256M
-    gamemode=0
-    max-players=20
-    spawn-protection=16
     white-list=off
-    enable-query=on
-    enable-rcon=off
-    motd=Minecraft: PE Server
     announce-player-achievements=on
-    allow-flight=off
-    spawn-animals=on
-    spawn-mobs=on
+    spawn-protection=16
+    max-players=20
+    gamemode=0
     force-gamemode=off
     hardcore=off
     pvp=on
@@ -35,8 +31,12 @@ server.properties
     level-name=world
     level-seed=
     level-type=DEFAULT
-    rcon.password=lT47ZUZs8L
+    enable-query=on
+    enable-rcon=off
+    rcon.password=vRS+68dQ8n
     auto-save=on
+    view-distance=8
+    xbox-auth=on
 
 
 pocketmine.yml
