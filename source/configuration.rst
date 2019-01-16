@@ -10,7 +10,6 @@ Default configuration files
 
 server.properties
 ~~~~~~~~~~~~~~~~~
-More info about the properties can be found on the `Minecraft wiki <http://minecraft.gamepedia.com/Server.properties>`_.
 
 .. code::
 
