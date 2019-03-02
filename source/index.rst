@@ -38,6 +38,7 @@ What features does it have?
 
 .. toctree::
     :caption: Other
+    :maxdepth: 1
 
     contact
     links
