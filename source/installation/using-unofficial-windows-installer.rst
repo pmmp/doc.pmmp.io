@@ -7,7 +7,7 @@ Download the latest version of the installer from `GitHub Releases <https://gith
 
 Then open the installer and follow the prompts.
 
-.. image:: https://thumbs.gfycat.com/DaringShockingAngelwingmussel-size_restricted.gif
+.. image:: /img/unofficial-windows-installer.gif
 
 .. note::
     You must be connected to the internet to run the installer.
