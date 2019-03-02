@@ -9,7 +9,7 @@ Did your server crash, or did you encounter a bug?
 - Ask for help on our `forums`_ before creating an issue.
 
 .. warning::
-    Please **do not** use our issue tracker for support requests, but instead seek assistance on the `forums`_. Support request issues will be closed as per the contribution guidelines.
+    Please **do not** use our issue tracker for support requests, but instead seek assistance on the `forums`_ or our `community Discord`_. Support request issues will be closed as per the contribution guidelines.
 
 .. note::
     Make sure you read the `contribution guidelines <https://github.com/pmmp/PocketMine-MP/blob/master/CONTRIBUTING.md#creating-an-issue>`_ before creating an issue.
@@ -25,3 +25,4 @@ Give as much information as you can about when or what happened.
 .. image:: /img/create-issue.png
 
 .. _forums: https://forums.pmmp.io
+.. _community Discord: https://discord.gg/bge7dYQ
