@@ -1,3 +1,5 @@
+.. _requirements:
+
 Setup requirements
 ------------------
 A computer or device with the following is required:
