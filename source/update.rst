@@ -33,33 +33,9 @@ Update PHP binary
 Updating PocketMine-MP
 ++++++++++++++++++++++
 
-Updating using .phar
-~~~~~~~~~~~~~~~~~~~~
-This is very straightforward.
-
 1. Delete your current PocketMine-MP.phar
 2. Download the updated PocketMine-MP phar you want to use (:ref:`Downloads <downloads>`)
 3. Change the name to ``PocketMine-MP.phar``
 4. Place it in the server folder
 
 .. note:: Don't forget to rename the file to ``PocketMine-MP.phar``
-
-
-Updating a Git installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you used Git to install, updating is very simple.
-
-cd into the server directory and run the following:
-
-.. code-block:: sh
-
-    git pull # get the latest source from GitHub
-    git submodule update # update submodules to the required versions
-    composer install [... optional extra composer flags] # install/update dependencies managed by Composer
-
-See :ref:`Installing using Git <install-using-git>` for more details.
-
-.. note::
-    Previous versions of PocketMine-MP used submodules ``src/spl`` and ``src/raklib``, which have now been removed. These submodules need to be manually deleted in your local installation.
-
-    To do so, delete the ``spl`` and ``raklib`` directories in the ``src`` directory, and then re-run Composer.
