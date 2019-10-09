@@ -3,9 +3,9 @@
 Updating
 ========
 
-Update using the installer (Linux/MacOS only)
----------------------------------------------
-You can also use the installer on these platforms to update your installation.
+Using https://get.pmmp.io (Linux/MacOS only)
+--------------------------------------------
+You can use `get.pmmp.io <https://get.pmmp.io>`_ to update as well as install from scratch.
 
 See the section :ref:`get_pmmp_io`.
 
