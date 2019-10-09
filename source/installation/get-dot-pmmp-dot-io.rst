@@ -1,3 +1,5 @@
+.. _get_pmmp_io:
+
 Using https://get.pmmp.io (Linux/MacOS only)
 --------------------------------------------
 .. warning::

@@ -9,16 +9,9 @@ Updating
 
 Update using the installer (Linux/MacOS only)
 ---------------------------------------------
-You can also use the installer on these platforms to update your installation. Passing the ``-u`` flag will update the PocketMine-MP installation.
+You can also use the installer on these platforms to update your installation.
 
-cd into your server directory.
-Then use ``curl`` or ``wget`` to update PocketMine-MP using the following command:
-
-.. code-block:: sh
-
-    curl -sL https://get.pmmp.io | bash -s - -u
-    wget -q -O - https://get.pmmp.io | bash -s - -u
-
+See the section :ref:`get_pmmp_io`.
 
 Manually update
 ---------------
