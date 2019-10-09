@@ -9,7 +9,7 @@ Getting PHP for your server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Download your flavor PHP binary (:ref:`Downloads <downloads>`)
-2. Extract the PHP binary into your server directory. If everything went well, you should have a `bin` folder in your server directory.
+2. Extract the PHP binary into your server directory. If everything went well, you should have a ``bin`` folder in your server directory.
 3. (Windows only) Download and install Microsoft Visual C++ Redistributable 2017 (:ref:`Downloads <downloads>`)
 
 Getting PocketMine-MP
