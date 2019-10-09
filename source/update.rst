@@ -3,10 +3,6 @@
 Updating
 ========
 
-.. contents::
-    :local:
-    :depth: 2
-
 Update using the installer (Linux/MacOS only)
 ---------------------------------------------
 You can also use the installer on these platforms to update your installation.
