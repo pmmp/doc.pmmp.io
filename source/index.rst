@@ -26,7 +26,8 @@ What features does it have?
 
 .. toctree::
     :glob:
-    :caption: Frequently Asked Questions
+    :caption: Frequently Asked Questions & Common Issues
+    :maxdepth: 2
 
     faq/*
 
