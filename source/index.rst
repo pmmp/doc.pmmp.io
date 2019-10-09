@@ -25,11 +25,14 @@ What features does it have?
     plugins
 
 .. toctree::
-    :glob:
     :caption: Frequently Asked Questions & Common Issues
     :maxdepth: 2
+    :glob:
 
-    faq/*
+    faq/installation
+    faq/connecting
+    faq/playing
+    faq/plugins
 
 .. toctree::
     :glob:
