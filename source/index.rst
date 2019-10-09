@@ -23,6 +23,7 @@ What features does it have?
     update
     configuration
     plugins
+    resourcepacks
 
 .. toctree::
     :caption: Frequently Asked Questions & Common Issues
