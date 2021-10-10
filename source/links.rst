@@ -22,7 +22,7 @@ Prebuilt PHP binaries and related packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Linux, Windows & MacOS
 **********************
-- `PHP 7.4 <https://jenkins.pmmp.io/job/PHP-7.4-Aggregate/>`_
+- `PHP 8.0 <https://jenkins.pmmp.io/job/PHP-8.0-Aggregate/>`_
 - (Windows only) `Microsoft Visual C++ 2017 Redistributable <https://aka.ms/vs/15/release/vc_redist.x64.exe>`_
 
 .. note::
