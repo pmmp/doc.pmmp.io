@@ -23,7 +23,7 @@ Prebuilt PHP binaries and related packages
 Linux, Windows & MacOS
 **********************
 - `PHP 8.0 <https://jenkins.pmmp.io/job/PHP-8.0-Aggregate/>`_
-- (Windows only) `Microsoft Visual C++ 2017 Redistributable <https://aka.ms/vs/15/release/vc_redist.x64.exe>`_
+- (Windows only) `Microsoft Visual C++ 2019 Redistributable <https://aka.ms/vs/15/release/vc_redist.x64.exe>`_
 
 .. note::
 	If there are no prebuilt binaries of the version you want available for your platform, you may be able to build your own using our `compile scripts`_.
