@@ -6,10 +6,11 @@ PocketMine-MP Documentation for http://pmmp.readthedocs.org/
 Build local
 -----------
 
-To build the documentation you need python and 2 extra modules. 
+### Pre-requisites
+- python3
+- pip
+- install the requirements using `pip install -r requirements.txt`
 
-* Sphinx
-* sphinx_rtd_theme
-
-or install it using `pip -r requirements`
+Once you've done the above, you can build the site by running `make html`.
+The HTML output files will be placed in the `./build` directory.
 
