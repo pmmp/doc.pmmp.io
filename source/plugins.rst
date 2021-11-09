@@ -19,4 +19,4 @@ Be sure to **delete old versions of the plugin**, and **restart the server** to 
 
 Writing your own plugins
 ~~~~~~~~~~~~~~~~~~~~~~~~
-You can find resources for plugin development at the `DeveloperDocs GitHub repository <https://github.com/pmmp/DeveloperDocs>`_.
+You can find resources for plugin development at the `DeveloperDocs site <https://devdoc.pmmp.io>`_.
