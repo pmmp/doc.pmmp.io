@@ -2,7 +2,7 @@ Contact and Support
 -------------------
 
 Help & Support
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Can't find what you're looking for here?
 Whether it's help setting up a server, finding problems with plugins, or anything else related to PocketMine-MP, our community will be happy to help you.
