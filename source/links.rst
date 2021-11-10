@@ -16,7 +16,7 @@ PocketMine-MP prebuilt phars
 
 Linux & MacOS installer script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* `Linux & MacOS install script source <https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh>`_
+* `Linux & MacOS install script source <https://github.com/pmmp/php-build-scripts/blob/stable/installer.sh>`_
 
 Prebuilt PHP binaries and related packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
