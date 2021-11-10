@@ -9,7 +9,7 @@ A plugin is an external module which can be "plugged in" to your server to add c
 
 Downloading plugins
 ~~~~~~~~~~~~~~~~~~~
-You can find a wide range of premade plugins on the `Poggit Release <https://poggit.pmmp.io>`_ plugin platform.
+You can find a wide range of premade plugins on the `Poggit Release <https://poggit.pmmp.io/plugins>`_ plugin platform.
 
 Installing/updating a plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
