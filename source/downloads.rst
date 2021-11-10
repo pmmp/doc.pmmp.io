@@ -5,7 +5,14 @@ Downloads
 
 PocketMine-MP prebuilt phars
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `GitHub Releases <https://github.com/pmmp/PocketMine-MP/releases>`_ - Downloads of PocketMine-MP release phars can be found here.
+
+- `Latest stable release <https://github.com/pmmp/PocketMine-MP/releases/latest>`_
+- `List of all releases <https://github.com/pmmp/PocketMine-MP/releases>`_
+
+.. tip::
+
+    Can't see the downloads? Click on 'Assets' to expand the downloads list.
+
 
 Prebuilt PHP binaries and related packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
