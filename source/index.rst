@@ -24,6 +24,9 @@ What features does it have?
     configuration
     plugins
     resourcepacks
+    downloads
+    contact
+    links
 
 .. toctree::
     :caption: Frequently Asked Questions & Common Issues
@@ -40,10 +43,3 @@ What features does it have?
     :caption: Issues, Bugs and Crashes
 
     issues/*
-
-.. toctree::
-    :caption: Other
-    :maxdepth: 1
-
-    contact
-    links
