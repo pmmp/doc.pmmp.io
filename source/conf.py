@@ -14,6 +14,7 @@
 
 import sys
 import os
+import time
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -44,7 +45,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'PocketMine-MP'
-copyright = u'2018, PocketMine Team'
+copyright = u'2014-%s, PocketMine Team' % time.strftime("%Y")
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
