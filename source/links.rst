@@ -9,10 +9,6 @@ Downloads
 PocketMine-MP prebuilt phars
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - `GitHub Releases <https://github.com/pmmp/PocketMine-MP/releases>`_ - Downloads of PocketMine-MP release phars can be found here.
-- `Jenkins server <https://jenkins.pmmp.io>`_ - Advanced users and/or developers may wish to use Jenkins to download development and/or pre-release builds (not recommended for most users).
-
-.. error::
-    Please AVOID using development builds where possible.
 
 Linux & MacOS installer script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
