@@ -193,3 +193,28 @@ Example:
 .. note::
     While it is possible to nest permission declarations in PocketMine-MP versions prior to 4.0.0, it's recommended *not* to do this because it causes unfixable bugs in permission defaults. (In effect, nested permissions are just a very weird and confusing way to declare permission groups.)
     Instead, you should give your permissions consistent names so that permission plugins can pattern-match them.
+
+src-namespace-prefix
+====================
+
+.. versionadded:: 4.0.0
+
+Type: ``string``
+
+Base namespace of the classes in your ``src/`` folder. Defaults to empty string.
+
+This allows you to have a longer namespace for your classes without having to create useless nested folders in your plugin structure.
+
+Examples:
+
++-----------------------------------+-------------------------------------------------+---------------------------------------------------------+
+| Value of ``src-namespace-prefix`` | Name of class including namespace               | Path class will be loaded from                          |
++===================================+=================================================+=========================================================+
+| (empty)                           | ``YourName\PluginName\Main``                    | ``src/YourName/PluginName/Main.php``                    |
+|                                   +-------------------------------------------------+---------------------------------------------------------+
+|                                   | ``YourName\PluginName\SubNamespace\OtherClass`` | ``src/YourName/PluginName/SubNamespace/OtherClass.php`` |
++-----------------------------------+-------------------------------------------------+---------------------------------------------------------+
+| ``YourName\PluginName``           | ``YourName\PluginName\Main``                    | ``src/Main.php``                                        |
+|                                   +-------------------------------------------------+---------------------------------------------------------+
+|                                   | ``YourName\PluginName\SubNamespace\OtherClass`` | ``src/SubNamespace/OtherClass.php``                     |
++-----------------------------------+-------------------------------------------------+---------------------------------------------------------+
