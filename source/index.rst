@@ -20,6 +20,7 @@ What features does it have?
     :caption: Getting Started
 
     installation
+    basic-usage
     update
     configuration
     plugins
