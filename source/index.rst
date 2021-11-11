@@ -21,7 +21,6 @@ What features does it have?
 
     installation
     basic-usage
-    update
     configuration
     plugins
     resourcepacks
