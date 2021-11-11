@@ -43,3 +43,9 @@ What features does it have?
     :caption: Issues, Bugs and Crashes
 
     issues/*
+
+.. toctree::
+    :caption: Plugin Developer Resources
+    :maxdepth: 1
+
+    developer-resources
