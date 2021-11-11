@@ -1,7 +1,7 @@
 .. _downloads:
 
-Downloads
-=========
+Downloads for manual install/update
+-----------------------------------
 
 PocketMine-MP prebuilt phars
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

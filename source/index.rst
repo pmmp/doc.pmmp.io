@@ -24,7 +24,6 @@ What features does it have?
     configuration
     plugins
     resourcepacks
-    downloads
     contact
     links
 

@@ -18,3 +18,11 @@ Updating
 .. toctree::
 
     installation/update
+
+Downloads
+---------
+
+.. toctree::
+    :maxdepth: 1
+
+    installation/downloads
