@@ -190,10 +190,6 @@ Example:
         # false: no one has this permission by default
         default: true
 
-.. note::
-    While it is possible to nest permission declarations in PocketMine-MP versions prior to 4.0.0, it's recommended *not* to do this because it causes unfixable bugs in permission defaults. (In effect, nested permissions are just a very weird and confusing way to declare permission groups.)
-    Instead, you should give your permissions consistent names so that permission plugins can pattern-match them.
-
 src-namespace-prefix
 ====================
 
