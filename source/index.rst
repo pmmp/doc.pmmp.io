@@ -18,6 +18,7 @@ What features does it have?
 .. toctree::
     :maxdepth: 2
     :caption: Getting Started
+    :hidden:
 
     installation
     basic-usage
@@ -31,6 +32,7 @@ What features does it have?
     :caption: Frequently Asked Questions & Common Issues
     :maxdepth: 2
     :glob:
+    :hidden:
 
     faq/installation
     faq/connecting
@@ -40,11 +42,13 @@ What features does it have?
 .. toctree::
     :glob:
     :caption: Issues, Bugs and Crashes
+    :hidden:
 
     issues/*
 
 .. toctree::
     :caption: Plugin Developer Resources
     :maxdepth: 1
+    :hidden:
 
     developer-resources
