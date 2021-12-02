@@ -15,6 +15,12 @@ What features does it have?
 - Performance fit to hold 100+ players (depends on hardware, see the :ref:`requirements` section).
 - Continuously updated to support latest Minecraft versions. PocketMine-MP has the longest and best track record of any custom server for compatibility with new Minecraft versions.
 
+.. note::
+
+   PocketMine-MP is **NOT** a complete vanilla server, and it doesn't have some features you would find in the vanilla game.
+
+   If you just want to play *survival multiplayer* and don't care about *plugins*, you should consider using the `official Minecraft: Bedrock server software <https://minecraft.net/download/server/bedrock>`_ instead of using PocketMine-MP.
+
 .. toctree::
     :maxdepth: 2
     :caption: Getting Started
