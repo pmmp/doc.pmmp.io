@@ -38,6 +38,7 @@ What features does it have?
     faq/connecting
     faq/playing
     faq/plugins
+    faq/about
 
 .. toctree::
     :glob:
