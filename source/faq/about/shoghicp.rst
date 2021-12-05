@@ -1,3 +1,5 @@
+.. _shoghicp:
+
 Who is @shoghicp?
 ~~~~~~~~~~~~~~~~~
 
