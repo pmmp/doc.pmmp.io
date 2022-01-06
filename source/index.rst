@@ -5,6 +5,7 @@
 .. image:: img/PocketMine-MP.png
    :align: center
 
+|
 
 PocketMine-MP is a custom server software for the Minecraft: Bedrock family of Minecraft editions (includes Android, iOS, W10 and others).
 
