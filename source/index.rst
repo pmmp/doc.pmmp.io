@@ -22,9 +22,8 @@ What features does it have?
    If you just want to play *survival multiplayer* and don't care about *plugins*, you should consider using the `official Minecraft: Bedrock server software <https://minecraft.net/download/server/bedrock>`_ instead of using PocketMine-MP.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Getting Started
-    :hidden:
 
     installation
     basic-usage
@@ -36,9 +35,8 @@ What features does it have?
 
 .. toctree::
     :caption: Frequently Asked Questions & Common Issues
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
-    :hidden:
 
     faq/installation
     faq/connecting
@@ -48,14 +46,13 @@ What features does it have?
 
 .. toctree::
     :glob:
+    :maxdepth: 1
     :caption: Issues, Bugs and Crashes
-    :hidden:
 
     issues/*
 
 .. toctree::
     :caption: Plugin Developer Resources
     :maxdepth: 1
-    :hidden:
 
     developer-resources
