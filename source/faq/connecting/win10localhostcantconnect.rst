@@ -1,5 +1,11 @@
 Minecraft can't connect to a server on the same computer on Windows
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+.. note::
+
+    These steps are **not** required to connect to all servers. You only need to do this if you're connecting to a server on the  **same computer** that you're running Minecraft on.
+
+Disable UWP loopback restrictions for Minecraft
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Windows UWP apps have some restrictions on what they are allowed to do by default.
 Unfortunately, this includes connecting to things on localhost.
@@ -12,6 +18,10 @@ To lift this restriction from Minecraft, launch Windows PowerShell as an adminis
 
 If everything goes well, you'll see a message: ``OK.`` You should now be able to connect (you may need to close and reopen the game).
 
-.. note::
+Don't use ``localhost`` for server address
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    This is **not** required to connect to all servers. You only need to do this if you're connecting to a server on the  **same computer** that you're running Minecraft on.
+Minecraft for Windows doesn't correctly handle the ``localhost`` address.
+
+Try using ``127.0.0.1`` (IPv4) or ``::1`` (IPv6) instead when adding the server to your server list.
+
