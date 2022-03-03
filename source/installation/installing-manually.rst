@@ -19,7 +19,7 @@ Getting PocketMine-MP
 2. Download PocketMine-MP.phar (:ref:`Downloads <downloads>`)
 3. Rename the .phar to ``PocketMine-MP.phar``.
 4. Place it in the PocketMine-MP directory you just created.
-5. Get the start script for your platform (`Windows CMD <https://github.com/pmmp/PocketMine-MP/releases/latest/download/start.cmd>`_, `Windows PowerShell <https://github.com/pmmp/PocketMine-MP/releases/latest/download/start.ps1>`_, `Linux/MacOS bash <https://github.com/pmmp/PocketMine-MP/releases/latest/download/start.sh>`_)
+5. Get the start script for your platform (`Windows <https://github.com/pmmp/PocketMine-MP/releases/latest/download/start.cmd>`_, `Linux/MacOS bash <https://github.com/pmmp/PocketMine-MP/releases/latest/download/start.sh>`_)
 6. (Linux/MacOS only) Make start.sh executable (chmod +x start.sh)
 
 
