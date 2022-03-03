@@ -7,6 +7,7 @@ Installation
 ------------
 
 .. toctree::
+    :maxdepth: 1
 
     installation/requirements
     installation/get-dot-pmmp-dot-io
@@ -16,6 +17,7 @@ Updating
 --------
 
 .. toctree::
+    :maxdepth: 1
 
     installation/update
 
