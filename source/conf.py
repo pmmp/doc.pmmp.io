@@ -204,7 +204,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'PocketMine-MPDocs.tex', u'PocketMine-MP Documentation',
-   u'dktapps', 'manual'),
+   u'PocketMine Team', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
