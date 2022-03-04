@@ -248,7 +248,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'PocketMine-MPDocs', u'PocketMine-MP Documentation',
-   u'dktapps', 'PocketMine-MPDocs', 'One line description of project.',
+   u'PocketMine Team', 'PocketMine-MPDocs', 'One line description of project.',
    'Miscellaneous'),
 ]
 
