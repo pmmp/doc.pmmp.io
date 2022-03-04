@@ -234,7 +234,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'pocketmine-mpdocs', u'PocketMine-MP Documentation',
-     [u'dktapps'], 1)
+     [u'PocketMine Team'], 1)
 ]
 
 # If true, show URL addresses after external links.
