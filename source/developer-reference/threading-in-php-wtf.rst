@@ -24,7 +24,7 @@ The only viable use cases are those which require relatively **little transfer o
 Threads don't inherit anything
 ==============================
 
-Every new thread in a ZTS build of PHP gets a completely new interpreter context. This means that no user classes are loaded (unless preloaded by OPcache).
+Every new thread in a ZTS build of PHP gets a completely new interpreter context. This means that no user classes are loaded (unless `preloaded by OPcache <https://www.php.net/manual/en/opcache.preloading.php>`_).
 
 Classes and functions aren't shared (or shareable) between threads, and therefore must be copied, or otherwise reloaded, onto a new thread.
 
