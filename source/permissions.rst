@@ -12,7 +12,14 @@ In addition, plugins can offer permissions to allow customising access to behavi
 
 PocketMine-MP doesn't directly offer any way to use permissions at the time of writing (August 2022), but you can find permission management plugins in the "Admin Tools" section on Poggit.
 
-- :ref:`List of PocketMine-MP core permissions <corepermissions>`
+Built-in permissions
+--------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    List of built-in permissions <core-permissions>
+
 
 Names
 -----
