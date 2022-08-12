@@ -47,6 +47,7 @@ What features does it have?
     configuration
     plugins
     resourcepacks
+    permissions
     contact
     links
 
