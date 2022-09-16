@@ -16,6 +16,12 @@ To lift this restriction from Minecraft, launch Windows PowerShell as an adminis
 
     CheckNetIsolation LoopbackExempt -a -n="Microsoft.MinecraftUWP_8wekyb3d8bbwe"
 
+For Minecraft Preview, you'll need a slightly different command:
+
+.. code-block:: sh
+
+    CheckNetIsolation LoopbackExempt -a -n="Microsoft.MinecraftWindowsBeta_8wekyb3d8bbwe"
+
 If everything goes well, you'll see a message: ``OK.`` You should now be able to connect (you may need to close and reopen the game).
 
 Don't use ``localhost`` for server address
