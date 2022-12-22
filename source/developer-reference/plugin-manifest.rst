@@ -1,9 +1,9 @@
 .. _plugin_yml_spec:
 
-Plugin manifest fields
-++++++++++++++++++++++
+``plugin.yml`` fields
++++++++++++++++++++++
 
-A plugin manifest is a document which contains information about a plugin. It is usually found in a `plugin.yml` file, but this is not mandatory.
+``plugin.yml`` is a manifest file which contains information about a plugin.
 
 .. contents:: Contents
    :depth: 3
