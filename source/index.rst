@@ -70,7 +70,7 @@ What features does it have?
     issues/*
 
 .. toctree::
-    :caption: Plugin Developer Resources
+    :caption: Developer Resources
     :maxdepth: 1
 
     developer-resources
