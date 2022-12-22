@@ -1,11 +1,11 @@
 .. _developer_reference:
 
-Plugin Developer Reference
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Developer Reference
+~~~~~~~~~~~~~~~~~~~
 
-This section contains documentation and reference pages for PocketMine-MP plugin developers. This documentation is a work in progress and contributions are welcomed. See the `TODO list`_ if you need ideas what to work on.
+This section contains documentation and reference pages for PocketMine-MP plugin and core developers. This documentation is a work in progress and contributions are welcomed. See the `TODO list`_ if you need ideas what to work on.
 
-.. _TODO list: https://github.com/pmmp/DeveloperDocs/issues/1
+.. _TODO list: https://github.com/pmmp/doc.pmmp.io/issues/24
 
 .. toctree::
    :glob:
