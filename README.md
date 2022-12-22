@@ -1,7 +1,9 @@
 PocketMine-MP Documentation
 ===========================
 
-PocketMine-MP Documentation for http://pmmp.readthedocs.org/
+This repository contains the source files for http://doc.pmmp.io/.
+
+The documentation is built and hosted by https://readthedocs.org/.
 
 Build local
 -----------
