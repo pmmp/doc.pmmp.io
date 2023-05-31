@@ -3,7 +3,7 @@ Failed loading opcache.so (or other PHP extensions)
 
 This may happen when the installer is not used or when PocketMine-MP was moved.
 
-To fix this issue, run the following from wherever your PHP bin directory is:
+To fix this issue, run the following using `bash` from wherever your PHP bin directory is:
 
 .. code-block:: sh
 
