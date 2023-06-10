@@ -1,7 +1,7 @@
 .. _installing-manually:
 
-Installing manually
--------------------
+Installing/updating manually
+----------------------------
 
 .. warning::
 

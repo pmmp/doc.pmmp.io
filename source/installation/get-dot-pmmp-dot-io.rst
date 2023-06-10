@@ -1,13 +1,19 @@
 .. _get_pmmp_io:
 
-Using https://get.pmmp.io (Linux/MacOS only)
---------------------------------------------
+Using the official installer (Linux/MacOS only)
+-----------------------------------------------
+
 .. warning::
     Only works on Linux or MacOS.
 
-Create a directory which you want to install PocketMine-MP into, and ``cd`` into it.
+If you're creating a new server, create a directory which you want to install PocketMine-MP into, and ``cd`` into it.
 
-Then use ``curl`` to install PocketMine-MP using the following command:
+Otherwise, just ``cd`` straight into your existing server folder.
+
+Installing/updating to the latest version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Then use ``curl`` to install/update PocketMine-MP using the following command:
 
 .. code-block:: sh
 
@@ -30,6 +36,7 @@ or, if you don't have ``curl``, try ``wget``:
   [3/3] MacOS 64-bit PHP build available, downloading PHP_5.6.10_x86-64_MacOS.tar.gz... checking... regenerating php.ini... done
   [*] Everything done! Run ./start.sh to start PocketMine-MP
 
+
 .. error::
 
     It is recommended to run it as a **normal user** as it doesn't need further permissions.
@@ -39,3 +46,22 @@ or, if you don't have ``curl``, try ``wget``:
 .. note::
 
     If the installer doesn't work for you, try :ref:`installing manually <installing-manually>`.
+
+Installing a specific version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you don't want to run the latest version, you may be able to run an older version by giving the ``-v`` option to the installer.
+
+Examples:
+
++-------------------+--------------------------------------------------------+
+| Version           | Command                                                |
++===================+========================================================+
+| Latest 4.x stable | ``curl -sL https://get.pmmp.io | bash -s - -v 4``      |
++-------------------+--------------------------------------------------------+
+| Latest 5.x beta   | ``curl -sL https://get.pmmp.io | bash -s - -v 5-beta`` |
++-------------------+--------------------------------------------------------+
+| Latest 5.1 stable | ``curl -sL https://get.pmmp.io | bash -s - -v 5.1``    |
++-------------------+--------------------------------------------------------+
+
+You can see a list of available options for ``-v`` by clicking `here <https://github.com/pmmp/update.pmmp.io/tree/master/channels>`_.
