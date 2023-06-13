@@ -2,7 +2,7 @@
 
 .. title:: PocketMine-MP
 
-.. image:: img/PocketMine-MP.png
+.. image:: img/pocketmine-rgb.gif
    :align: center
 
 |
