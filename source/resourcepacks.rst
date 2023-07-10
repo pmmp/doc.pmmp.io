@@ -23,7 +23,7 @@ Resource packs to be loaded should be placed in the ``resource_packs`` folder of
 Then, you will need to add them to the stack in the ``resource_packs.yml`` file (also located in the ``resource_packs`` folder).
 
 
-Resource stack
+Resource packs
 ~~~~~~~~~~~~~~
 
 This is a list of resource packs in ``resource_packs.yml`` that will used by your server. It should contain a list of valid resource pack file names found in the ``resource_packs`` folder, including the file extension.
