@@ -25,16 +25,18 @@ or, if you don't have ``curl``, try ``wget``:
 
     wget -q -O - https://get.pmmp.io | bash -s -
 
-.. code-block:: sh
+.. code-block:: log
 
-  [*] Found PocketMine-MP Final_1.5dev (build 1254) using API 1.12.0
-  [*] This development build was released on Sat Jun 20 09:45:04 CEST 2015
+  [*] Retrieving latest build data for channel "stable"
+  [*] Found PocketMine-MP 5.2.0 (build 2166) for Minecraft: PE v1.20.0 (PHP 8.1)
+  [*] This stable build was released on Tue 01 Jul 2023 02:00:00 PM UTC
+  [-] This channel should have a signature, none found
   [*] Installing/updating PocketMine-MP on directory ./
   [1/3] Cleaning...
-  [2/3] Downloading PocketMine-MP Final_1.5dev-1254 phar... done!
-  [3/3] Obtaining PHP: detecting if build is available...
-  [3/3] MacOS 64-bit PHP build available, downloading PHP_5.6.10_x86-64_MacOS.tar.gz... checking... regenerating php.ini... done
+  [2/3] Downloading PocketMine-MP phar... done!
+  [3/3] Obtaining PHP: detecting if build is available... Linux PHP build available... downloading 8.1 ... updating php.ini... checking... done
   [*] Everything done! Run ./start.sh to start PocketMine-MP
+
 
 
 .. error::
