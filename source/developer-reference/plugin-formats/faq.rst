@@ -3,11 +3,6 @@
 Frequently Asked Questions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Does the ``/reload`` command reload plugin source code?
--------------------------------------------------------
-
-No. This is not currently possible.
-
 How do I load a ``.zip`` plugin?
 --------------------------------
 
