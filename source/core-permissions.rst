@@ -3,7 +3,7 @@
 List of PocketMine-MP core permissions
 ======================================
 
-Generated from PocketMine-MP 4.13.1+dev
+Generated from PocketMine-MP 5.15.1+dev
 
 .. list-table::
    :header-rows: 1
@@ -34,7 +34,7 @@ Generated from PocketMine-MP 4.13.1+dev
      - Allows the user to clear their own inventory
      - N/A
    * - ``pocketmine.command.defaultgamemode``
-     - Allows the user to change the default gamemode
+     - Allows the user to change the default game mode
      - N/A
    * - ``pocketmine.command.difficulty``
      - Allows the user to change the game difficulty
@@ -42,27 +42,18 @@ Generated from PocketMine-MP 4.13.1+dev
    * - ``pocketmine.command.dumpmemory``
      - Allows the user to dump memory contents
      - N/A
-   * - ``pocketmine.command.effect``
-     - Deprecated, kept for backwards compatibility only
-     - :ref:`Jump<permissions_implied_by_pocketmine.command.effect>`
    * - ``pocketmine.command.effect.other``
      - Allows the user to modify effects of other players
      - N/A
    * - ``pocketmine.command.effect.self``
      - Allows the user to modify their own effects
      - N/A
-   * - ``pocketmine.command.enchant``
-     - Deprecated, kept for backwards compatibility only
-     - :ref:`Jump<permissions_implied_by_pocketmine.command.enchant>`
    * - ``pocketmine.command.enchant.other``
      - Allows the user to enchant the held items of other players
      - N/A
    * - ``pocketmine.command.enchant.self``
      - Allows the user to enchant their own held item
      - N/A
-   * - ``pocketmine.command.gamemode``
-     - Deprecated, kept for backwards compatibility only
-     - :ref:`Jump<permissions_implied_by_pocketmine.command.gamemode>`
    * - ``pocketmine.command.gamemode.other``
      - Allows the user to change the game mode of other players
      - N/A
@@ -72,9 +63,6 @@ Generated from PocketMine-MP 4.13.1+dev
    * - ``pocketmine.command.gc``
      - Allows the user to fire garbage collection tasks
      - N/A
-   * - ``pocketmine.command.give``
-     - Deprecated, kept for backwards compatibility only
-     - :ref:`Jump<permissions_implied_by_pocketmine.command.give>`
    * - ``pocketmine.command.give.other``
      - Allows the user to give items to other players
      - N/A
@@ -118,10 +106,10 @@ Generated from PocketMine-MP 4.13.1+dev
      - Allows the user to enable automatic saving
      - N/A
    * - ``pocketmine.command.save.perform``
-     - Allows the user to perform a manual save
+     - Allows the user to enable automatic saving
      - N/A
    * - ``pocketmine.command.say``
-     - Allows the user to talk as the console
+     - Allows the user to broadcast announcements to the server
      - N/A
    * - ``pocketmine.command.seed``
      - Allows the user to view the seed of the world
@@ -129,9 +117,6 @@ Generated from PocketMine-MP 4.13.1+dev
    * - ``pocketmine.command.setworldspawn``
      - Allows the user to change the world spawn
      - N/A
-   * - ``pocketmine.command.spawnpoint``
-     - Deprecated, kept for backwards compatibility only
-     - :ref:`Jump<permissions_implied_by_pocketmine.command.spawnpoint>`
    * - ``pocketmine.command.spawnpoint.other``
      - Allows the user to change the respawn point of other players
      - N/A
@@ -144,9 +129,6 @@ Generated from PocketMine-MP 4.13.1+dev
    * - ``pocketmine.command.stop``
      - Allows the user to stop the server
      - N/A
-   * - ``pocketmine.command.teleport``
-     - Deprecated, kept for backwards compatibility only
-     - :ref:`Jump<permissions_implied_by_pocketmine.command.teleport>`
    * - ``pocketmine.command.teleport.other``
      - Allows the user to teleport other players
      - N/A
@@ -160,7 +142,7 @@ Generated from PocketMine-MP 4.13.1+dev
      - Allows the user to fast-forward time
      - N/A
    * - ``pocketmine.command.time.query``
-     - Allows the user query the time
+     - Allows the user to check the time
      - N/A
    * - ``pocketmine.command.time.set``
      - Allows the user to change the time
@@ -174,9 +156,6 @@ Generated from PocketMine-MP 4.13.1+dev
    * - ``pocketmine.command.timings``
      - Allows the user to record timings to analyse server performance
      - N/A
-   * - ``pocketmine.command.title``
-     - Deprecated, kept for backwards compatibility only
-     - :ref:`Jump<permissions_implied_by_pocketmine.command.title>`
    * - ``pocketmine.command.title.other``
      - Allows the user to send a title to the specified player
      - N/A
@@ -236,125 +215,6 @@ Implied permissions can be overridden by explicit permissions from elsewhere.
 **Note:** When explicitly denied, implied permissions are inverted. This means that "granted" becomes "denied" and vice versa.
 
 
-
-.. _permissions_implied_by_pocketmine.command.effect:
-
-Permissions implied by ``pocketmine.command.effect``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Users granted this permission will also be granted/denied the following permissions implicitly:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-   * - ``pocketmine.command.effect.other``
-     - Granted
-   * - ``pocketmine.command.effect.self``
-     - Granted
-
-.. _permissions_implied_by_pocketmine.command.enchant:
-
-Permissions implied by ``pocketmine.command.enchant``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Users granted this permission will also be granted/denied the following permissions implicitly:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-   * - ``pocketmine.command.enchant.other``
-     - Granted
-   * - ``pocketmine.command.enchant.self``
-     - Granted
-
-.. _permissions_implied_by_pocketmine.command.gamemode:
-
-Permissions implied by ``pocketmine.command.gamemode``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Users granted this permission will also be granted/denied the following permissions implicitly:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-   * - ``pocketmine.command.gamemode.other``
-     - Granted
-   * - ``pocketmine.command.gamemode.self``
-     - Granted
-
-.. _permissions_implied_by_pocketmine.command.give:
-
-Permissions implied by ``pocketmine.command.give``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Users granted this permission will also be granted/denied the following permissions implicitly:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-   * - ``pocketmine.command.give.other``
-     - Granted
-   * - ``pocketmine.command.give.self``
-     - Granted
-
-.. _permissions_implied_by_pocketmine.command.spawnpoint:
-
-Permissions implied by ``pocketmine.command.spawnpoint``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Users granted this permission will also be granted/denied the following permissions implicitly:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-   * - ``pocketmine.command.spawnpoint.other``
-     - Granted
-   * - ``pocketmine.command.spawnpoint.self``
-     - Granted
-
-.. _permissions_implied_by_pocketmine.command.teleport:
-
-Permissions implied by ``pocketmine.command.teleport``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Users granted this permission will also be granted/denied the following permissions implicitly:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-   * - ``pocketmine.command.teleport.other``
-     - Granted
-   * - ``pocketmine.command.teleport.self``
-     - Granted
-
-.. _permissions_implied_by_pocketmine.command.title:
-
-Permissions implied by ``pocketmine.command.title``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Users granted this permission will also be granted/denied the following permissions implicitly:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Type
-   * - ``pocketmine.command.title.other``
-     - Granted
-   * - ``pocketmine.command.title.self``
-     - Granted
 
 .. _permissions_implied_by_pocketmine.group.console:
 
