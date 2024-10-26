@@ -17,18 +17,102 @@ Pre-requisites
 - Git clones of `PocketMine-MP <https://github.com/pmmp/PocketMine-MP>`_, `BedrockProtocol <https://github.com/pmmp/BedrockProtocol>`_, `BedrockData <https://github.com/pmmp/BedrockData>`_, `BedrockBlockUpgradeSchema <https://github.com/pmmp/BedrockBlockUpgradeSchema>`_, and `BedrockItemUpgradeSchema <https://github.com/pmmp/BedrockItemUpgradeSchema>`_
 - A local copy of `BedrockProtocolDumper <https://github.com/pmmp/BedrockProtocolDumper>`_
 
-Basic changes to BedrockProtocol and PocketMine-MP
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 1: Generating supporting data (part 1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PocketMine-MP requires additional data from the new version of Minecraft to function correctly. This includes:
+
+These data originate from several sources:
+
+1. `protocol_info_dumper.py <https://github.com/pmmp/bds-modding-devkit/blob/master/protocol_info_dumper.py>`_ which generates basic version info and packet ID lists for updating BedrockProtocol.
+2. Mods of the Bedrock Dedicated Server that dump the needed data. This method is a pain, but it's the only way to get some data.
+3. Packet traces of the Bedrock Dedicated Server communicating with a vanilla Minecraft client.
+
+Tools to collect all of this data are provided in `bds-modding-devkit <https://github.com/pmmp/bds-modding-devkit>`_.
+
+Follow the instructions in the `modding toolkit`_ repository README to set up the modding environment and install the BDS version you want to dump data from.
+
+.. note::
+
+        Unfortunately, Mojang no longer publicly provide BDS builds with debugging symbols as of 1.21.40. **This means that you need access to BDS builds provided by a server or Marketplace partner to generate the needed data.**
+
+        Some of the data can be scraped from the public protocol docs instead, but not all data can be collected from the docs either. This leaves third party servers dependent on the goodwill of Minecraft partners.
+
+Generating basic protocol info from BDS
+.......................................
+
+Use the `protocol info dumper <https://github.com/pmmp/bds-modding-devkit/blob/master/protocol_info_dumper.py>`_ to generate ``protocol_info.json`` for ``BedrockData``.
+
+This script requires Python 3, ``objdump`` (install the ``binutils`` package), and a BDS binary with debugging symbols.
+
+Use it like so: ``python3 protocol_info_dumper.py ./bedrock_server_symbols.debug ./protocol_info.json``
+
+Once you have the file, put it in your ``BedrockData`` folder.
+
+Getting data from BDS via mods
+..............................
+
+
+The mod code of interest can be found in the `data extraction mod`_ main repository.
+This mod is preinstalled by the modding toolkit when you clone following the instructions in the README.
+
+Once you've generated the data, copy all the files (not the folders) in ``mapping_files/`` to ``BedrockData``.
+
+There may be additional files that are not needed by ``BedrockData``. You can ignore these.
+
+.. note::
+
+	The code often needs to be updated to work with the latest version of the BDS.
+	This guide won't cover how to make the mods run on newest BDS, as the changes needed are usually different from version to version, and this guide would end up very long.
+	You really should have general experience modding BDS before trying to get into this.
+	If you need help, ask in the PMMP Discord server.
+
+.. warning::
+
+	Make sure the ``input_files/old_block_palettes`` submodule is up to date, and that it contains a block palette for the previous version of Minecraft.
+	You'll need this later for generating blockstate upgrade schemas.
+
+Collecting vanilla <-> vanilla packet traces
+............................................
+
+The `modding toolkit`_ also provides a `tracer script`_ that can be used to hook into a running instance of BDS and capture packet traces between a vanilla client and server.
+This script uses the `Frida.re <https://frida.re>`_ Python API to hook into packet read and write functions in the BDS.
+The script has no impact on vanilla behaviour, guaranteeing the best quality data.
+
+These traces can be used to generate data, and also to verify that your changes to `BedrockProtocol`_ are correct.
+
+Steps to capture packet traces:
+
+1. Create a new world in Minecraft on the target version. Make sure to enable any experiments which add new blocks or items, as these need to be present for generating data upgrade schemas.
+2. Configure ``server.properties`` on your BDS to use the world you generated.
+3. Start ``bedrock_server_symbols.debug`` directly (do not use ``start.sh``).
+4. In a separate terminal, run the following command: ``sudo python3 tracer.py rw bedrock_server_symbols.debug``. This will hook into the running BDS instance and start capturing packet traces.
+5. Join the BDS server using Minecraft. Do whatever in-game tests you need to get the game to send packets you want to see.
+6. Stop the server. The script will print the filename of the trace file it generated. This usually looks something like ``packets_123456789.txt``.
+
+This trace file will be used later on to generate further data, but it's necessary to update BedrockProtocol before doing so.
+
+.. warning::
+	Do not use ``tracer.py`` on a server with mods loaded. The BDS instance may crash or behave unexpectedly.
+
+.. note::
+
+	You may have difficulty joining a BDS server running inside WSL2 from a Windows Minecraft client. This is a long-standing issue between WSL2 and UWP apps and has no known fix.
+	You can work around it by using a basic proxy script like `RakLib proxy.php <https://github.com/pmmp/RakLib/blob/stable/tools/proxy.php>`_ and joining via the proxy instead of trying to connect directly.
+	Alternatively, just run the server on a proper Linux machine or VM.
+
+.. note::
+
+	If you don't want to use ``tracer.py``, you can also create a packet trace using a proxy such as `gophertunnel`_.
+	The structure of the file is simple: each line is starts with ``read:`` or ``write:`` followed by the packet buffer encoded as base64.
+	However, a proxy may change the structure, order and timings of packets, so it may not give the same quality of data as the tracer script.
+
+Step 2: Update code in BedrockProtocol and PocketMine-MP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``BedrockProtocol`` is where most of the manual work needs to be done.
 
-1. Use ``protocol_info_generator_objdump.py`` in ``BedrockProtocolDumper`` to generate packet ID lists and version information. This script requires Python 2, and takes a path to a ``bedrock_server_symbols.debug`` file and a path to your ``BedrockProtocol`` local copy. The following things will be updated:
-
-  - ``src/PacketPool.php``
-  - ``src/ProtocolInfo.php``
-  - ``src/PacketHandler.php``
-  - ``src/PacketHandlerInterface.php``
-  - New files may be added if there are new packets in the version you are updating to. However, files will **not** be removed for deleted packets - that's up to you to do manually.
+1. Use ``tools/update-from-bedrock-data.php`` in ``BedrockProtocol`` to generate the basics from the data you generated for step 1. This will update a few enums and add stub classes for new packets. **Files will not be removed for deleted packets.**
 
 2. Analyze what changes need to be made to packet structures. This typically involves one or more of the following methods:
 
@@ -58,74 +142,27 @@ Basic changes to BedrockProtocol and PocketMine-MP
 
 	You can also use ``gdb`` to look at BDS's compiled assembly code, which can be much faster, but is also much more difficult to understand.
 
-Generating supporting data
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 3: Generating supporting data (part 2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-PocketMine-MP requires additional data from the new version of Minecraft to function correctly. This includes:
+Generating the remaining files for BedrockData
+..............................................
 
-These data originate from two sources:
-
-1. Mods of the Bedrock Dedicated Server that dump the needed data. This method is a pain, but it's the only way to get some data. This could become a problem in the future if Mojang proceed with their plans to remove debugging symbols from the BDS.
-2. Packet traces of the Bedrock Dedicated Server communicating with a vanilla Minecraft client. These can be obtained in several different ways, but not all required data can be obtained this way.
-
-Getting data from BDS via mods
-..............................
-
-PMMP provides a `modding toolkit`_ that makes it easy to run the needed mods on the BDS.
-Follow the instructions in the repository README to set up the modding environment and run the mods.
-
-The mod code of interest can be found in the `data extraction mod`_ main repository.
-This mod is preinstalled by the modding toolkit when you clone following the instructions in the README.
-
-Once you've generated the data, copy all the files (not the folders) in ``input_files/`` to ``BedrockData``.
-There may be additional files that are not needed by ``BedrockData``. You can ignore these.
+Now that you've updated ``BedrockProtocol``, use tools in ``PocketMine-MP`` to generate data from the packet trace you collected in part 1.
 
 .. note::
 
-	The code often needs to be updated to work with the latest version of the BDS.
-	This guide won't cover how to make the mods run on newest BDS, as the changes needed are usually different from version to version, and this guide would end up very long.
-	You really should have general experience modding BDS before trying to get into this.
-	If you need help, ask in the PMMP Discord server.
+        ``BedrockProtocol`` code must be updated to handle the new version's packets before trying to parse packet traces.
 
-.. warning::
+Use PocketMine-MP's ``tools/generate-bedrock-data-from-packets.php`` to parse the packet trace ``.txt`` file you collected earlier, like so:
 
-	Make sure the ``input_files/old_block_palettes`` submodule is up to date, and that it contains a block palette for the previous version of Minecraft.
-	You'll need this later for generating blockstate upgrade schemas.
+.. code-block:: sh
 
-Getting data from vanilla <-> vanilla packet traces
-...................................................
+        cd pocketmine-mp
+        php tools/generate-bedrock-data-from-packets.php ./packets_123456789.txt ../deps/BedrockData
 
-The `modding toolkit`_ also provides a `tracer script`_ that can be used to hook into a running instance of BDS and capture packet traces between a vanilla client and server.
-This script uses the `Frida.re <https://frida.re>`_ Python API to hook into packet read and write functions in the BDS.
-The script has no impact on vanilla behaviour, guaranteeing the best quality data.
-
-These traces can be used to generate data, and also to verify that your changes to `BedrockProtocol`_ are correct.
-
-Steps to capture packet traces:
-
-1. Create a new world in Minecraft on the target version. Make sure to enable any experiments which add new blocks or items, as these need to be present for generating data upgrade schemas.
-2. Configure ``server.properties`` on your BDS to use the world you generated.
-3. Start ``bedrock_server_symbols.debug`` directly (do not use ``start.sh``).
-4. In a separate terminal, run the following command: ``sudo python3 tracer.py rw bedrock_server_symbols.debug``. This will hook into the running BDS instance and start capturing packet traces.
-5. Join the BDS server using Minecraft. Do whatever in-game tests you need to get the game to send packets you want to see.
-6. Stop the server. The script will print the filename of the trace file it generated. This usually looks something like ``packets_123456789.txt``.
-
-Once you have a trace file, use PocketMine's ``tools/generate-bedrock-data-from-packets.php`` script, providing the path to the trace file as an argument and the path to your local copy of ``BedrockData``. The script will update the appropriate files in ``BedrockData``.
-
-.. warning::
-	Do not use ``tracer.py`` on a server with mods loaded. The BDS instance may crash or behave unexpectedly.
-
-.. note::
-
-	You may have difficulty joining a BDS server running inside WSL2 from a Windows Minecraft client. This is a long-standing issue between WSL2 and UWP apps and has no known fix.
-	You can work around it by using a basic proxy script like `RakLib proxy.php <https://github.com/pmmp/RakLib/blob/stable/tools/proxy.php>`_ and joining via the proxy instead of trying to connect directly.
-	Alternatively, just run the server on a proper Linux machine or VM.
-
-.. note::
-
-	If you don't want to use ``tracer.py``, you can also create a packet trace using a proxy such as `gophertunnel`_.
-	The structure of the file is simple: each line is starts with ``read:`` or ``write:`` followed by the packet buffer encoded as base64.
-	However, a proxy may change the structure, order and timings of packets, so it may not give the same quality of data as the tracer script.
+This will extract various information from the packet dump, like creative inventory items, crafting recipes, and more.
+Once you've done this, ``BedrockData`` is ready to publish. However, do not push anything to the master branch until the official Mojang release day.
 
 Generating a blockstate upgrade schema
 ......................................
@@ -155,10 +192,10 @@ Steps to generate an item upgrade schema:
 2. Add the schema to the ``id_meta_upgrade_schema`` folder of ``BedrockItemUpgradeSchema``. The name should be prefixed with a number to ensure the files are sorted correctly, like this: ``0181_1.20.70.24_beta_to_1.20.80.24_beta.json``.
 3. Commit the new schema. **Do not commit directly to the master branch until the version is released.**
 
-Completing changes in PocketMine-MP using the new data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 4: Completing changes in PocketMine-MP using the new data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have generated supporting data, you may need to do a few more changes to PocketMine-MP.
+Once you have finished generated supporting data, you may need to do a few more changes to PocketMine-MP.
 
 This mostly involves updating the code in ``src/data/bedrock/block`` and ``src/data/bedrock/item`` to decode and encode data in the expected format for the newest version.
 
@@ -180,8 +217,8 @@ Steps to do the changes:
 
 5. Run ``vendor/bin/phpunit tests/phpunit``. Make sure all the tests pass. If you've made a mistake somewhere, the tests should fail.
 
-Playtesting PocketMine-MP
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 5: Playtesting PocketMine-MP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once you've made all the changes, you should playtest PocketMine-MP to make sure everything works as expected.
 
@@ -189,8 +226,8 @@ Once you've made all the changes, you should playtest PocketMine-MP to make sure
 2. Load the world into PocketMine-MP and start the server.
 3. Do whatever playtests you need to make sure your changes work as expected.
 
-Committing the results
-~~~~~~~~~~~~~~~~~~~~~~
+Finally: Committing the results
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once you're happy with your changes, commit the changes on all repositories.
 By convention, we recommend you name your branch like this: ``bedrock-1.21.0``.
