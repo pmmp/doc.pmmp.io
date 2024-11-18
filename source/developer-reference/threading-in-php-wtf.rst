@@ -8,9 +8,7 @@ This page aims to give some technical insight into what's required to get thread
 PHP is not designed for this!
 =============================
 
-PHP's design goal is to provide an easy scripting language for use on webservers, for delivering webpages to browsers. It's popular for this use case. Unfortunately, web requests don't usually need threading in user code, since web requests typically last a few seconds at most, and are mostly I/O bound, not needing the use of many CPU cores. PHP has flourished for over 20 years without support for user threads, and it's likely this will continue to be the case for years to come.
-
-Because almost all use-cases for PHP involve serving web requests, the design choices made by the PHP developers over the decades have been oriented with a webserver-first approach. Serving webpages is something PHP does very well. One of these design choices has been to make no effort whatsoever to implement support for userland threading.
+Because almost all use-cases for PHP involve serving web requests (which typically last a few seconds at most, and are mostly I/O bound, not needing the use of many CPU cores), PHP's development for most of its 20+ year lifetime has been focused on optimizing for that use-case. As a result, the interpreter is heavily optimized for single-threaded user code, and there are no provisions made for sharing any important data structures between threads. This makes it especially difficult to support threading in an extension.
 
 Almost everything must be copied
 ================================
@@ -19,7 +17,7 @@ Every complex data structure in PHP is non-thread-safe. This applies to userland
 
 This means **all of these things must be copied** in order to get them from one thread to another, which makes passing large data from one thread to another very expensive, and therefore **severely limits** the viable use cases of PHP threading. The CPU cost of copying the required data onto the target thread can easily exceed the time saved by threading.
 
-The only viable use cases are those which require relatively **little transfer of data** between threads but have relatively **large time cost**. Currently, PocketMine-MP only uses threads for world generation, light calculation, network compression, some internal network systems, and the occasional cURL request.
+The only viable use cases are those which require relatively **little transfer of data** between threads but have relatively **large time cost**. Currently, PocketMine-MP only uses threads for world generation, lighting calculation, network compression, some internal network systems, and the occasional cURL request.
 
 Threads don't inherit anything
 ==============================
@@ -48,4 +46,8 @@ ZTS is marginally less unsuitable. While ZTS enables running multiple independen
 
 Every threading extension made for PHP has built on top of the ZTS mode, and from there done an enormous amount of hacks to make different threads able to interact with each other, despite the limitations imposed by the Zend Engine.
 
-Implementing threading properly into PHP would require a significant amount of changes to the PHP core, which it seems no one in the world is inclined to do. Until the time comes when a knight in shining armour implements threading properly into PHP, we're stuck with stuff like pthreads and all the hacks necessary to make it even remotely usable.
+Summary
+=======
+Implementing threading properly into PHP would require a significant amount of changes to the PHP core. Due to the lack of significant community demand for user threading in PHP, it seems unlikely this will happen in the foreseeable future.
+
+Therefore, threading in PHP will likely continue to be a fringe use case only provided by extensions, with all the limitations, hacks, headaches and performance issues that entails.
