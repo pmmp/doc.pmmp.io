@@ -206,14 +206,25 @@ Steps to do the changes:
 1. Run ``composer update-codegen``.
 2. Run ``vendor/bin/phpstan``. This will tell you where you need to make changes.
 3. Fix all the problems reported by PHPStan.
-4. Make sure the following constants are updated correctly:
+4. Make sure the following constants are updated correctly in ``src/data/bedrock/WorldDataVersions.php``:
 
-	- ``BlockStateData::CURRENT_VERSION`` (often changes)
-	- ``BedrockWorldData::CURRENT_STORAGE_VERSION`` (rarely changes)
-	- ``BedrockWorldData::CURRENT_STORAGE_NETWORK_VERSION`` (always changes)
-	- ``BedrockWorldData::CURRENT_CLIENT_VERSION_TARGET`` (always changes)
-	- ``LevelDB::CURRENT_LEVEL_CHUNK_VERSION`` (rarely changes)
-	- ``LevelDB::CURRENT_LEVEL_SUBCHUNK_VERSION`` (rarely changes)
++--------------------+---------------------+------------------------------------------------------------------------------+
+| Constant           | Frequency of change | Description                                                                  |
++====================+=====================+==============================================================================+
+| ``LAST_OPENED_IN`` | Every update        | Tells Minecraft what version what features the world uses                    |
++--------------------+---------------------+------------------------------------------------------------------------------+
+| ``NETWORK``        | Every update        | Prevents Minecraft from opening worlds which use features it doesn't support |
++--------------------+---------------------+------------------------------------------------------------------------------+
+| ``BLOCK_STATES``   | Often               | Tells the world system whether block NBT needs upgrading                     |
++--------------------+---------------------+------------------------------------------------------------------------------+
+| ``CHUNK``          | Rarely              | Tells the world system what format saved chunks are in                       |
++--------------------+---------------------+------------------------------------------------------------------------------+
+| ``SUBCHUNK``       | Rarely              | Same again, but for subchunk data                                            |
++--------------------+---------------------+------------------------------------------------------------------------------+
+| ``STORAGE``        | Rarely              | Tells the world system the general storage format to expect                  |
++--------------------+---------------------+------------------------------------------------------------------------------+
+
+
 
 5. Run ``vendor/bin/phpunit tests/phpunit``. Make sure all the tests pass. If you've made a mistake somewhere, the tests should fail.
 
