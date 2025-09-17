@@ -52,6 +52,7 @@ If you're looking to create a Minecraft: Bedrock server with **custom functional
 
     installation
     basic-usage
+    connecting
     configuration
     plugins
     resourcepacks
