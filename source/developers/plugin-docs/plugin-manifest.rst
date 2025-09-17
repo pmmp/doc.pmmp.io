@@ -5,10 +5,6 @@
 
 ``plugin.yml`` is a manifest file which contains information about a plugin.
 
-.. contents:: Contents
-   :depth: 3
-   :local:
-
 Required fields
 ~~~~~~~~~~~~~~~
 
