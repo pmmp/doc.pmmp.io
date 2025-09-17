@@ -2,10 +2,13 @@
 
 .. title:: PocketMine-MP
 
-.. image:: img/pocketmine-rgb.gif
+.. figure:: https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/.github/readme/pocketmine-rgb.gif
+   :figclass: light-only
    :align: center
 
-|
+.. figure:: https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/.github/readme/pocketmine-dark-rgb.gif
+   :figclass: dark-only
+   :align: center
 
 .. raw:: html
 

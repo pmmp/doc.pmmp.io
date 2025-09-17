@@ -98,8 +98,7 @@ pygments_style = 'sphinx'
 # -- Options for HTML output ----------------------------------------------
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_rtd_theme'
-
+html_theme = 'shibuya'
 html_css_files = [
     'theme_overrides.css',
 ]
@@ -108,8 +107,8 @@ html_css_files = [
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'display_version': False,
-    'prev_next_buttons_location': None
+    'light_logo': 'https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/.github/readme/pocketmine-rgb.gif',
+    'dark_logo': 'https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/.github/readme/pocketmine-dark-rgb.gif'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
