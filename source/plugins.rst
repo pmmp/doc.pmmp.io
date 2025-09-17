@@ -19,4 +19,10 @@ Be sure to **delete old versions of the plugin**, and **restart the server** to 
 
 Writing your own plugins
 ~~~~~~~~~~~~~~~~~~~~~~~~
-You can find resources for plugin development at the `DeveloperDocs site <https://devdoc.pmmp.io>`_.
+You can find resources for plugin development in the :ref:`plugin development docs <plugin_docs_index>` section.
+
+.. tip::
+
+   All public plugins on Poggit Release are open-source, and there are many more on GitHub.
+
+   You can learn a lot from looking at other people's code that you can't easily learn from documentation pages.

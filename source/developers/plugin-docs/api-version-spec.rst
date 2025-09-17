@@ -8,26 +8,22 @@ PocketMine-MP plugins are required to declare which API versions they are compat
 As of PocketMine-MP 3.0.0, the API version is the same as the server version. This version is a semantic ``major.minor.patch`` version number. Read more about `semantic versioning <https://semver.org/>`_.
 
 
-Definitions
-===========
+How the API version is changed
+==============================
 
-Semver is roughly defined as the following:
-
-- Major version bump: Breaking changes - the public API has changed in such a way that it breaks thing depending on it.
-- Minor version bump: Feature additions or big changes which do not break API. This can include API methods becoming deprecated, new API features being added, but should not break plugins designed for previous minor versions.
-- Patch version bump: Usually bug fixes. These shouldn't break the API nor cause any significant alteration to the description of a version.
-
-PocketMine-MP uses a condition of ``==.>=.>=`` (or ``eq.ge.ge`` if you prefer ``bash`` notation) for comparing API versions. This means that:
-
-- The major version **MUST be the same** to be compatible
-- The server's minor version **MUST be AT LEAST the same** as the plugin's, although it can be greater.
-- The server's patch version **MUST be AT LEAST the same** as the plugin's, but can also be greater.
-
-The PocketMine-MP developers strive to ensure that any non-major version does not break API compatibility with plugins. This means that a plugin written to target ``3.1.1`` should also work on any future ``3.x.y`` version, but **not** ``4.0.0`` or any future major versions.
++-------+------------------+--------------------------------------------------------------------------------------------------------+
+| Type  | Example          | Description                                                                                            |
++=======+==================+========================================================================================================+
+| Major | 5.33.0 -> 6.0.0  | Changing or deleting features                                                                          |
++-------+------------------+--------------------------------------------------------------------------------------------------------+
+| Minor | 5.33.0 -> 5.34.0 | New features were added, existing ones were deprecated, or the supported Minecraft version was changed |
++-------+------------------+--------------------------------------------------------------------------------------------------------+
+| Patch | 5.33.0 -> 5.33.1 | Bugs were fixed                                                                                        |
++-------+------------------+--------------------------------------------------------------------------------------------------------+
 
 
-Examples
-========
+Compatibility checking examples
+===============================
 
 +----------------+----------------+------------+---------------------------------------------------------------------------------+
 | Server version | Plugin version | Compatible | Reason                                                                          |

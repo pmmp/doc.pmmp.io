@@ -1,4 +1,4 @@
-.. _developer_reference:
+.. _plugin_docs_index:
 
 Plugin development docs
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -15,23 +15,13 @@ Developing a plugin? This section has reference pages for lots of things.
    :glob:
    :maxdepth: 1
 
-   plugin-dev-docs/*
-
-PocketMine-MP core development docs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Want to contribute to PocketMine-MP, but don't know how to do what you want? These pages might have what you need.
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-
-   core-dev-docs/*
+   plugin-docs/*
 
 External development resources
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 * `Doxygen <https://apidoc.pmmp.io>`_ - API documentation for latest release
 * `DevTools <https://github.com/pmmp/PocketMine-DevTools/>`_ - Development tools plugin for creating plugins
 * `ExamplePlugin <https://github.com/pmmp/ExamplePlugin/>`_ - Example plugin demonstrating some basic API features
-
+* `PM 4.0 API changes <https://github.com/pmmp/PocketMine-MP/blob/stable/changelogs/4.0.md#api>`_ - All the plugin-breaking changes when upgrading from 3.x -> 4.0
+* `PM 5.0 API changes <https://github.com/pmmp/PocketMine-MP/blob/stable/changelogs/5.0.md#api>`_ - All the plugin-breaking changes when upgrading from 4.x -> 5.0

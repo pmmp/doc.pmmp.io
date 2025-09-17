@@ -26,20 +26,25 @@
 
     `Plugin Repository <https://poggit.pmmp.io/plugins>`_ • `Forums <https://forums.pmmp.io>`_ • `Discord <https://discord.gg/bge7dYQ>`_ • `Source Code <https://github.com/pmmp>`_
 
-PocketMine-MP is a custom server software for the Minecraft: Bedrock family of Minecraft editions (includes Android, iOS, W10 and others).
+PocketMine-MP is a highly customisable server software for Minecraft: Bedrock Edition, built from scratch in PHP, with over 10 years of history.
 
-What features does it have?
-===========================
-- A powerful plugin API, which allows you to extend and customize your server far more easily and extensively than any competing server implementations, including the official vanilla server.
-- Multi-world support, allowing you to offer a more varied game experience to players without transferring them to other server nodes.
-- Performance fit to hold 100+ players (depends on hardware, see the :ref:`requirements` section).
-- Continuously updated to support latest Minecraft versions. PocketMine-MP has the longest and best track record of any custom server for compatibility with new Minecraft versions.
+If you're looking to create a Minecraft: Bedrock server with **custom functionality**, look no further.
+
+- 🧩 **Powerful plugin API** - extend and customise gameplay as you see fit
+- 🗺️ **Rich ecosystem** and **large developer community** - find plugins easily and learn to develop your own
+- 🌐 **Multi-world support** - offer a more varied game experience to players without transferring them to other server nodes
+- 🏎️ **Performance** - get 100+ players onto one server (depending on hardware and plugins)
+- ⤴️ **Continuously updated** - new Minecraft versions are usually supported within days
 
 .. note::
+   
+   **PocketMine-MP is NOT a vanilla Minecraft server software.**
+   It is poorly suited to hosting vanilla survival servers.
+   It doesn't have many features from the vanilla game, such as vanilla world generation, redstone, mob AI, and various other things.
 
-   PocketMine-MP is **NOT** a complete vanilla server, and it doesn't have some features you would find in the vanilla game.
+   If you just want to play **vanilla survival multiplayer**, consider using the `official Minecraft: Bedrock server software <https://minecraft.net/download/server/bedrock>`_ instead of PocketMine-MP.
 
-   If you just want to play *survival multiplayer* and don't care about *plugins*, you should consider using the `official Minecraft: Bedrock server software <https://minecraft.net/download/server/bedrock>`_ instead of using PocketMine-MP.
+   If that's not an option for you, you may be able to add some of PocketMine-MP's missing features using plugins from `Poggit <https://poggit.pmmp.io/plugins>`_, or write plugins to implement them yourself.
 
 .. toctree::
     :maxdepth: 1
@@ -73,7 +78,9 @@ What features does it have?
     issues/*
 
 .. toctree::
+    :glob:
     :caption: Developer Resources
     :maxdepth: 1
 
-    developer-resources
+    developers/plugin-docs-index.rst
+    developers/*
