@@ -172,7 +172,7 @@ PocketMine-MP uses JSON schemas to tell it how to upgrade blockstate NBT data in
 Steps to generate a blockstate upgrade schema:
 
 1. Get the appropriate palette mapping file that the BDS mod generated. You can find it in ``mapping_files/old_palette_mappings``, and the file name will be something like ``1.20.80.24_beta_to_current_block_map.bin``.
-2. Use PocketMine-MP's ``tools/generate-blockstate-upgrade-schema.php`` to generate a new schema for this version.
+2. Use PocketMine-MP's ``tools/blockstate-upgrade-schema-utils.php`` to generate a new schema for this version.
 3. Add the schema to the ``nbt_upgrade_schema`` folder of ``BedrockBlockUpgradeSchema``. The name should be prefixed with a number to ensure the files are sorted correctly, like this: ``0271_1.20.70.24_beta_to_1.20.80.24_beta.json``.
 4. Commit the new schema. **Do not commit directly to the master branch until the version is released.**
 
