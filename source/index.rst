@@ -60,7 +60,6 @@ If you're looking to create a Minecraft: Bedrock server with **custom functional
     contributing
     issues
     contact
-    links
 
 .. toctree::
     :caption: Frequently Asked Questions & Common Issues
