@@ -1,28 +1,29 @@
 .. _github_issues:
 
-Using the GitHub Issue Tracker
-==============================
-Did your server crash, or did you encounter a bug?
+Reporting Bugs
+==============
 
-- Make sure you're using the latest available version of PocketMine-MP, as the bug might already have been fixed.
-- Try and reproduce it **WITHOUT PLUGINS**, as plugins can frequently cause issues.
-- Ask for help on our `forums`_ before creating an issue.
+We accept bug reports via `GitHub issues <https://github.com/pmmp/PocketMine-MP/issues>`_.
+It's a quick and easy way to report problems to the team so they can be fixed.
 
-.. warning::
-    Please **do not** use our issue tracker for support requests, but instead seek assistance on the `forums`_ or our `community Discord`_. Support request issues will be closed as per the contribution guidelines.
+Before creating a bug report
+----------------------------
+
+To avoid wasting your time or ours, try the following before submitting a report:
+
+- Update to the latest PocketMine-MP version - the bug might have already been fixed
+- Try and reproduce the bug on a clean server **without plugins**, to make sure it's not a plugin causing the problem
+- Ask for help on our `community Discord`_
+
+Issue still not resolved?
+-------------------------
+
+If you've tried all the steps above and your problem persists, go ahead and `create a bug report <https://github.com/pmmp/PocketMine-MP/issues>`_. 
 
 .. note::
-    Make sure you read the `contribution guidelines <https://github.com/pmmp/PocketMine-MP/blob/master/CONTRIBUTING.md#creating-an-issue>`_ before creating an issue.
+   If your server crashed and generated a crashdump, be sure to include the file or link in your issue.
 
-If your issue is still unresolved and you're sure the issue is caused by PocketMine-MP itself, then `make a new issue <https://github.com/pmmp/PocketMine-MP/issues/new>`_ on GitHub.
-
-Issue template
-~~~~~~~~~~~~~~
-
-An issue template is provided, showing the information that we require for an issue submission. **Do not** just delete the template - fill it with the information it asks for.
-Give as much information as you can about when or what happened.
-
-.. image:: /img/create-issue.png
+   This will make it easier for the team to diagnose and fix your issue.
 
 .. _forums: https://forums.pmmp.io
 .. _community Discord: https://discord.gg/bge7dYQ

@@ -57,6 +57,8 @@ If you're looking to create a Minecraft: Bedrock server with **custom functional
     plugins
     resourcepacks
     permissions
+    contributing
+    issues
     contact
     links
 
@@ -70,13 +72,6 @@ If you're looking to create a Minecraft: Bedrock server with **custom functional
     faq/playing
     faq/plugins
     faq/about
-
-.. toctree::
-    :glob:
-    :maxdepth: 1
-    :caption: Issues, Bugs and Crashes
-
-    issues/*
 
 .. toctree::
     :glob:

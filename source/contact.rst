@@ -14,7 +14,7 @@ Reporting Bugs
 ~~~~~~~~~~~~~~
 
 * Contact `team@pmmp.io`_ directly if you want to report a security issue / exploit.
-* For all other bugs, head to our `GitHub issue tracker`_.
+* For all other bugs, check out the :ref:`Bugs & Crashes <bugs_crashes>` section.
 
 .. _Forums: https://forums.pmmp.io
 .. _Discord: https://discord.gg/bge7dYQ
