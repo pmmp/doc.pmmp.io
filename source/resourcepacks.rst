@@ -26,7 +26,7 @@ Then, you will need to add them to the stack in the ``resource_packs.yml`` file 
 Resource stack
 ~~~~~~~~~~~~~~
 
-This is a list of resource packs in ``resource_packs.yml`` that will used by your server. It should contain a list of valid resource pack file names found in the ``resource_packs`` folder, including the file extension.
+This is a list of resource packs in ``resource_packs.yml`` that will be used by your server. It should contain a list of valid resource pack file names found in the ``resource_packs`` folder, including the file extension.
 
 Resource packs are applied from bottom to top, similar to how they work in Minecraft itself. This means that resources at the top of the list will override resources lower down the list.
 

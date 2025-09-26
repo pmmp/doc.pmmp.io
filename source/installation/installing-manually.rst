@@ -13,7 +13,7 @@ Windows
 1. Make a folder for your server. If you're updating an existing server, delete ``PocketMine-MP.phar``, any file called ``start``, and the ``bin`` folder from the folder.
 2. Download the custom PHP binary for Windows `here <https://github.com/pmmp/PHP-Binaries/releases>`_. **Make sure you get the right version for your chosen version of PocketMine-MP** (see below).
 3. Right-click -> click Extract All, pick your server folder and click Extract. Now you should have a folder called ``bin``.
-4. In the ``bin`` folder, double-click the fole ``vc_redist.x64.exe``, accept the terms and conditions, and install. This will install Microsoft Visual C++ Redistributable, which is needed by the PHP binary.
+4. In the ``bin`` folder, double-click the file ``vc_redist.x64.exe``, accept the terms and conditions, and install. This will install Microsoft Visual C++ Redistributable, which is needed by the PHP binary.
 5. Download your chosen version of ``PocketMine-MP.phar`` and ``start.cmd`` from `here <https://github.com/pmmp/PocketMine-MP/releases>`_ and save them in your server folder.
 
 Now you should be able to double-click ``start.cmd`` to start the server.
@@ -42,6 +42,6 @@ Now you should be able to run the server by running ``./start.sh``.
 
     Binaries have a suffix that tells you which PocketMine-MP version they are for. ``PM4`` is for 4.x, and ``PM5`` is for 5.x.
 
-    There are also different downloads different operating systems, different CPU architectures and different versions of PHP itself.
+    There are also different downloads for different operating systems, different CPU architectures and different versions of PHP itself.
 
     **If you use the wrong binary, the server might not work.**

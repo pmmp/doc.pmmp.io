@@ -9,7 +9,7 @@ Server behaviour
 PocketMine-MP's behaviour is controlled by several configuration files. You can edit them to change the behaviour of your server.
 
 * ``server.properties`` contains basic settings like the server name, port, maximum view distance, etc. These settings are all safe to change.
-* ``pocketmine.yml`` contains more advanced settings settings like memory usage, max thread count, etc. It also contains settings for loading multiple worlds.
+* ``pocketmine.yml`` contains more advanced settings like memory usage, max thread count, etc. It also contains settings for loading multiple worlds.
 
 .. warning::
 
