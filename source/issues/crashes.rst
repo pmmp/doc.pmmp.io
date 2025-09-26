@@ -6,7 +6,7 @@ Crashes
 PocketMine-MP may crash for a number of reasons:
 
 - Bad / faulty plugins.
-- Running out of memory due to not enough or memory leak.
+- Running out of memory, or memory leaks.
 - Bugs within the PocketMine-MP which are unrecoverable.
 
 In all of the above cases, a crashdump file will be generated in the ``crashdumps`` folder of your server.

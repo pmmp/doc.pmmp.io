@@ -3,7 +3,7 @@
 API versioning
 --------------
 
-PocketMine-MP plugins are required to declare which API versions they are compatible. This is used to decide whether or not to load a plugin, and to gracefully degrade when the plugin is not compatible with the given server version.
+PocketMine-MP plugins are required to declare which API versions they are compatible with. This is used to decide whether or not to load a plugin, and to gracefully degrade when the plugin is not compatible with the given server version.
 
 As of PocketMine-MP 3.0.0, the API version is the same as the server version. This version is a semantic ``major.minor.patch`` version number. Read more about `semantic versioning <https://semver.org/>`_.
 

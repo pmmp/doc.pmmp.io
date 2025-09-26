@@ -31,7 +31,7 @@ MONITOR These handlers will execute last.
 
         **No modification to the event's outcome should be made at this priority, including cancellation**.
 
-        This should be used to only for **monitoring the outcome** of an event.
+        This should be used only for **monitoring the outcome** of an event.
 ======= ===========
 
 .. warning::
