@@ -7,8 +7,7 @@ Help & Support
 Can't find what you're looking for here?
 Whether it's help setting up a server, finding problems with plugins, or anything else related to PocketMine-MP, our community will be happy to help you.
 
-* `Discord`_
-* `Forums`_
+Join our `Discord`_ server to start chatting!
 
 Reporting Bugs
 ~~~~~~~~~~~~~~
