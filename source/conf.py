@@ -110,7 +110,14 @@ html_theme_options = {
     'light_logo': 'https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/.github/readme/pocketmine-rgb.gif',
     'dark_logo': 'https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/.github/readme/pocketmine-dark-rgb.gif'
 }
+html_context = {
+    'source_type': 'github',
+    'source_user': 'pmmp',
+    'source_repo': 'PocketMine-MP',
 
+    #for Edit this page (docs)
+    'source_edit_template': 'https://github.com/pmmp/doc.pmmp.io/blob/rtfd/source/{0}'
+}
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
