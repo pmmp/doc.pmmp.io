@@ -3,7 +3,7 @@
 List of PocketMine-MP core permissions
 ======================================
 
-Generated from PocketMine-MP 5.15.1+dev
+Generated from PocketMine-MP 5.35.0
 
 .. list-table::
    :header-rows: 1
@@ -106,7 +106,7 @@ Generated from PocketMine-MP 5.15.1+dev
      - Allows the user to enable automatic saving
      - N/A
    * - ``pocketmine.command.save.perform``
-     - Allows the user to enable automatic saving
+     - Allows the user to perform a manual save
      - N/A
    * - ``pocketmine.command.say``
      - Allows the user to broadcast announcements to the server
@@ -191,6 +191,12 @@ Generated from PocketMine-MP 5.15.1+dev
      - N/A
    * - ``pocketmine.command.whitelist.remove``
      - Allows the user to remove a player from the server whitelist
+     - N/A
+   * - ``pocketmine.command.xp.other``
+     - Allows the user to add or remove experience of other players
+     - N/A
+   * - ``pocketmine.command.xp.self``
+     - Allows the user to add or remove their experience
      - N/A
    * - ``pocketmine.group.console``
      - Grants all console permissions
@@ -348,6 +354,10 @@ Users granted this permission will also be granted/denied the following permissi
    * - ``pocketmine.command.whitelist.reload``
      - Granted
    * - ``pocketmine.command.whitelist.remove``
+     - Granted
+   * - ``pocketmine.command.xp.other``
+     - Granted
+   * - ``pocketmine.command.xp.self``
      - Granted
    * - ``pocketmine.group.user``
      - Granted
