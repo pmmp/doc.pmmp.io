@@ -7,6 +7,9 @@ Getting it working as a bare minimum
 1) Make the class (if it needs one) or choose one of the standard classes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Using predefined block classes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 The majority of blocks don’t need a custom class, since they’re just
 cubes. You can use ``Opaque`` or ``Transparent`` for these, depending on
 what the block needs.
@@ -14,10 +17,46 @@ what the block needs.
 There are also standard classes for lots of common blocks that you can
 use, such as ``Wall``, ``Door``, ``Stair``, ``Trapdoor`` etc.
 
-If you need a custom class, take a look at some of the traits in the
-``src/block/utils`` folder if you need to add common properties to your
-block. *Don’t forget to implement the related interfaces if you use a
-trait.*
+Making a custom block class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Custom block classes are only usually needed if a new block needs specific
+properties (e.g. facing, age, etc), or if the block has special behaviour
+or functionality (e.g. custom drops, ticking logic or interaction behaviour).
+
+Predefined traits
++++++++++++++++++
+
+There are many traits in the ``src/block/utils`` folder which add common
+properties and/or behaviour to blocks (e.g. copper properties, facing).
+Use these if they suit your needs.
+
+.. note::
+   Don’t forget to implement the related interfaces if you use a trait.
+
+If none of the traits suit your purpose, you might need to add properties
+of your own.
+
+Defining your own properties
+++++++++++++++++++++++++++++
+
+This is pretty simple:
+
+1. Define a `private` or `protected` field in the block class
+2. Add a ``public`` getter and a ``public`` fluent setter for it (a setter that returns ``$this``). Don't forget to add validation to the setter where appropriate.
+3. Track the property using ``describeBlockOnlyState()`` or ``describeBlockItemState()`` (see below).
+
++------------------------------+--------------------------------+------------------------------------------+
+| Function                     | When block is obtained as item | Examples                                 |
++==============================+================================+==========================================+
+| ``describeBlockOnlyState()`` | Discarded                      | facing, open/closed, powered, age        |
++------------------------------+--------------------------------+------------------------------------------+
+| ``describeBlockItemState()`` | Kept                           | color, stripped (wood), copper oxidation |
++------------------------------+--------------------------------+------------------------------------------+
+
+.. warning::
+   If you don't track the property using one of the ``describe`` functions, its value won't be remembered across different ``getBlock()`` calls.
+
 
 2) Register your block in ``src/block/VanillaBlocks.php``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
