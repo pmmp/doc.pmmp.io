@@ -46,13 +46,13 @@ This is pretty simple:
 2. Add a ``public`` getter and a ``public`` fluent setter for it (a setter that returns ``$this``). Don't forget to add validation to the setter where appropriate.
 3. Track the property using ``describeBlockOnlyState()`` or ``describeBlockItemState()`` (see below).
 
-+------------------------------+--------------------------------+------------------------------------------+
-| Function                     | When block is obtained as item | Examples                                 |
-+==============================+================================+==========================================+
-| ``describeBlockOnlyState()`` | Discarded                      | facing, open/closed, powered, age        |
-+------------------------------+--------------------------------+------------------------------------------+
-| ``describeBlockItemState()`` | Kept                           | color, stripped (wood), copper oxidation |
-+------------------------------+--------------------------------+------------------------------------------+
++------------------------------+---------------------------------+------------------------------------------+
+| Function                     | When block is obtained as item  | Examples                                 |
++==============================+=================================+==========================================+
+| ``describeBlockOnlyState()`` | Properties are discarded        | facing, open/closed, powered, age        |
++------------------------------+---------------------------------+------------------------------------------+
+| ``describeBlockItemState()`` | Properties are kept on the item | color, stripped (wood), copper oxidation |
++------------------------------+---------------------------------+------------------------------------------+
 
 .. warning::
    If you don't track the property using one of the ``describe`` functions, its value won't be remembered across different ``getBlock()`` calls.
