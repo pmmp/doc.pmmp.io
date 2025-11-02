@@ -57,6 +57,27 @@ This is pretty simple:
 .. warning::
    If you don't track the property using one of the ``describe`` functions, its value won't be remembered across different ``getBlock()`` calls.
 
+Adding custom behaviour
++++++++++++++++++++++++
+
+There are many functions you can override to change the default behaviour of a block.
+Some common ones include:
+
++---------------------------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| Function                        | Called when                                                                                           | Usage examples                                         |
++=================================+=======================================================================================================+========================================================+
+| ``onInteract()``                | Player right-clicks or taps the block                                                                 | Opening inventory windows, opening/closing doors       |
++---------------------------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``place()``                     | Player tries to place the block                                                                       | Placing a block that faces a particular direction      |
++---------------------------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``onNearbyBlockChange()``       | Block nearby (or the block itself) recently changed                                                   | Torch self-destructing because its support was deleted |
++---------------------------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``getDropsForCompatibleTool()`` | Player breaks the block with the correct type and tier of tool                                        | Customising drops                                      |
++---------------------------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``onRandomTick()``              | Randomly when inside a player's simulation distance (requires ``ticksRandomly()`` to return ``true``) | Crop growth                                            |
++---------------------------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| ``onScheduledUpdate()``         | Delayed update was scheduled on the block                                                             | Liquid flow                                            |
++---------------------------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 
 2) Register your block in ``src/block/VanillaBlocks.php``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
