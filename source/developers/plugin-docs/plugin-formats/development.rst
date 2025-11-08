@@ -28,15 +28,22 @@ Loading
 Script
 ------
 
-This plugin format works out of the box, but it's not recommended for production use, and has less features than a normal plugin would.
-This format is useful if you want to quickly test some features but don't need a full-blown plugin.
+A script plugin is a single ``.php`` file. They're useful for quickly testing features without creating a full plugin structure.
 
-See `this thread <https://forums.pocketmine.net/threads/new-plugin-scripting-format-draft.8335/>`_ to see how a script plugin looks and works.
+There are some key differences between a script plugin and other types of plugins:
+
+- Instead of a ``plugin.yml``, the basic metadata of the plugin is declared in a PHPDoc comment at the top of the file
+- You can declare multiple classes, but all of them must be inside the script plugin's ``.php`` file
+- Resources and ``config.yml`` files are not supported by default
+- ``onCommand()`` is not supported
+- Any manifest attribute that accepts arrays or objects (e.g. ``commands``, ``permissions``, ``authors``) is not supported
+
+Check out the `example on GitHub <https://github.com/pmmp/PocketMine-MP/blob/stable/examples/plugins/ExampleScriptPlugin.php>`_.
 
 Loading
 =======
 
-1. Drop the `.php` file into your `plugins` folder.
+1. Drop the ``.php`` file into your ``plugins`` folder.
 2. Restart the server and the plugin will be loaded.
 
 .. _DevTools: https://github.com/pmmp/DevTools/releases
