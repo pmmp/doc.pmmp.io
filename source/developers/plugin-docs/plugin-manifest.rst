@@ -88,7 +88,18 @@ load
 
 Type: ``string``
 
-When in the startup sequence to prefer loading this plugin. Currently can be one of ``STARTUP`` or ``POSTWORLD``. See plugin load order. (TODO: add a link here)
+When in the startup sequence to call the plugin's ``onEnable()``. Default is ``POSTWORLD``.
+
++---------------+--------------------------------------------------------------------------------------+
+| Value         | When ``onEnable()`` will be called                                                   |
++===============+======================================================================================+
+| ``STARTUP``   | Directly before any world is loaded                                                  |
++---------------+--------------------------------------------------------------------------------------+
+| ``POSTWORLD`` | After all worlds declared in ``server.properties`` and ``pocketmine.yml`` are loaded |
++---------------+--------------------------------------------------------------------------------------+
+
+.. tip::
+   If you need to use ``STARTUP``, but also need to run code when worlds are loaded, consider using ``WorldLoadEvent``.
 
 depend
 ======
