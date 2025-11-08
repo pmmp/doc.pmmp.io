@@ -16,7 +16,7 @@ The type of event handled by a function is decided by the type of the first para
 .. note::
 
     Handler function names are **completely ignored**. You can name event handling functions whatever you like.
-    A common convention is to name them with an `on` prefix (e.g. ``onChat(PlayerChatEvent $ev)``, but this is not required.
+    A common convention is to name them with an `on` prefix (e.g. ``onChat(PlayerChatEvent $ev)``), but this is not required.
 
 What counts as a handler method?
 ++++++++++++++++++++++++++++++++
