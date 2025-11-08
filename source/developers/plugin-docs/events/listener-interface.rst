@@ -15,7 +15,8 @@ The type of event handled by a function is decided by the type of the first para
 
 .. note::
 
-    Handler function names are **completely ignored**. Therefore, it doesn't matter whether your handler is called ``onPlayerJoin()`` or ``iEatEnglishForBreakfast()``; as long as the function meets the required criteria described below, it will be registered.
+    Handler function names are **completely ignored**. You can name event handling functions whatever you like.
+    A common convention is to name them with an `on` prefix (e.g. `onChat(PlayerChatEvent $ev)`, but this is not required.
 
 What counts as a handler method?
 ++++++++++++++++++++++++++++++++
@@ -43,4 +44,3 @@ The following annotations are respected for candidate handlers:
 - ``@notHandler``: Marks a function as explicitly NOT being an event handler, even if it meets all other criteria.
 - ``@ignoreCancelled``: This handler WILL NOT receive events which are cancelled before reaching it.
 - ``@priority``: Allows controlling when in the event calling sequence this handler will be executed. This allows competing handlers of the same event to cooperate to some extent. See the section below on event priority. Example: ``@priority NORMAL``
-- ``@softDepend``: Skips registering the handler if the event class it wants to handle does not exist. This can be used to soft-depend on classes provided by other plugins. Example: ``@softDepend SimpleAuth``
