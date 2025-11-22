@@ -44,7 +44,7 @@ For this purpose, we recommend using the ``screen`` command. You can usually ins
 Starting a screen for a new server instance
 ===========================================
 
-To create a new screen:
+To create a new screen, ``cd`` into the server folder and run the following:
 
 .. code-block:: sh
 
@@ -70,7 +70,7 @@ To get out of the screen and put the server in the background, press ``Ctrl a`` 
 Opening the console of a server running in the background
 =========================================================
 
-To get back to the console of a server you've already started, ``cd`` into the server folder and run the following:
+To get back to the console of a server you've already started:
 
 .. code-block:: sh
 
