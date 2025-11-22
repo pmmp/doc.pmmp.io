@@ -83,7 +83,7 @@ Docker allows you to map ports, so you don't need to edit ``server.properties``.
 In the run command shown above, change ``19132:19132/udp`` to ``<port number you want>:19132/udp``. **Note: Do not change the second number.**
 
 .. warning::
-   Do not change the port in `server.properties`. This is unnecessary when using Docker and will make things more complicated.
+   Do not change the port in ``server.properties``. This is unnecessary when using Docker and will make things more complicated.
 
 Managing the server data
 ========================
