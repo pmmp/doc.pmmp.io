@@ -13,7 +13,7 @@ To install Docker, refer to the `official Docker docs <https://docs.docker.com/e
 Running the server
 ------------------
 
-This is really easy once you have `docker` installed.
+This is really easy once you have ``docker`` installed.
 
 .. code-block:: sh
 
