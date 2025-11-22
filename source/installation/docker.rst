@@ -105,7 +105,7 @@ You can change the location of the folder used by changing the path before the `
 +--------------+------------+-----------------------------------------------------------------------------+
 
 .. warning::
-   If you add new files (e.g. a world) to these folders manually, don't forget to change the ownership of the file/folder to ``1000:1000``**:
+   If you add new files (e.g. a world) to these folders manually, don't forget to change the ownership of the file/folder to ``1000:1000``:
 
    ``sudo chown -R 1000:1000 <file/folder you added>``
 
