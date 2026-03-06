@@ -79,7 +79,7 @@ Some common ones include:
 | ``onScheduledUpdate()``         | Delayed update was scheduled on the block                                                             | Liquid flow                                            |
 +---------------------------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 
-2) Register your block in ``src/block/VanillaBlocks.php``
+2) Register your block in ``src/block/VanillaBlocksInputs.php``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This will create a ``VanillaBlocks::YOUR_BLOCK()`` static method
@@ -92,9 +92,8 @@ automagically. In here, you’ll define properties like:
 - Explosion resistance (optional, defaults to hardness x5)
 
 After you’ve registered your block in here, run
-``composer update-codegen`` in your CLI. This will regenerate the
-docblock on ``VanillaBlocks`` so your IDE knows about
-``VanillaBlocks::YOUR_BLOCK()``.
+``composer update-codegen`` in your CLI. This will regenerate ``VanillaBlocks.php`` so your IDE knows 
+about ``VanillaBlocks::YOUR_BLOCK()``.
 
 3) Setup the block (de)serializer in ``src/data/bedrock/block/convert/VanillaBlockMappings.php``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
