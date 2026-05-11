@@ -39,7 +39,7 @@ Then, activate it for Command Prompt (cmd.exe):
 
 For PowerShell:
 ```powershell
-.\venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 ```
 
 ---
