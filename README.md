@@ -68,6 +68,6 @@ make html
 .\make.bat html
 ```
 
- The generated HTML files will be located in the `./build/html` directory. Open `./build/html/index.html` in your browser to view the site.
+The generated HTML files will be located in the `./build/html` directory. Open `./build/html/index.html` in your browser to view the site.
 
 
