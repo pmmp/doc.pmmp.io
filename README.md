@@ -25,7 +25,14 @@ source .venv/bin/activate
 
 #### Windows
 
-For Command Prompt (cmd.exe):
+First, create the virtual environment:
+
+```cmd
+python -m venv .venv
+```
+
+Then, activate it for Command Prompt (cmd.exe):
+
 ```cmd
 .venv\Scripts\activate.bat
 ```
@@ -34,6 +41,8 @@ For PowerShell:
 ```powershell
 .\venv\Scripts\Activate.ps1
 ```
+
+---
 
 ### 3. Install Dependencies
 Install the required Sphinx extensions and themes:
