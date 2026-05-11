@@ -16,14 +16,14 @@ To build and preview the documentation locally, follow these steps:
 ### 2. Setup Environment (Recommended)
 It is highly recommended to use a virtual environment to avoid conflicts:
 
-# Linux/macOS
+#### Linux/macOS
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-# Windows
+#### Windows
 
 ```bash
 python -m venv .venv
@@ -42,13 +42,13 @@ Note: Linux users may need to install 'make' (e.g., sudo apt install make)
 
 Once the setup is complete, run the build command:
 
-# Linux/macOS
+#### Linux/macOS
 
 ```bash
 make html
 ```
 
-# Windows
+#### Windows
 
 ```bash
 .\make.bat html
