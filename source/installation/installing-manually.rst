@@ -32,7 +32,7 @@ The following steps require you to use the Terminal.
 6. Find the download link for your chosen version of ``PocketMine-MP.phar`` and ``start.sh`` `here <https://github.com/pmmp/PocketMine-MP/releases>`__.
 7. Run ``curl -LO <link to PocketMine-MP.phar>``.
 8. Run ``curl -LO <link to start.sh>``.
-9. Run ``chmod +x ./start.sh``.`
+9. Run ``chmod +x ./start.sh``.
 
 Now you should be able to run the server by running ``./start.sh``.
 
