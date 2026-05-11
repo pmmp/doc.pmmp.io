@@ -41,7 +41,7 @@ Install the required Sphinx extensions and themes:
 pip install -r requirements.txt
 ```
 
-Note: Linux users may need to install 'make' (e.g., sudo apt install make)
+> Note: Linux users may need to install `make` (e.g., `sudo apt install make`)
 
 ### 4. Build the Documentation
 
