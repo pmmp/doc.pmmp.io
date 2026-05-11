@@ -29,7 +29,7 @@ The following steps require you to use the Terminal.
 3. Run ``rm -rf ./bin ./PocketMine-MP.phar ./start.sh``. This deletes any outdated server files (don't worry, your data won't be harmed).
 4. Find the download link for the right PHP version for your OS. You can see a list of available ones from `here <https://github.com/pmmp/PHP-Binaries/releases>`__.
 5. Run ``curl -L <link to your chosen PHP binary> | tar -xz``. Now you should have a folder called ``bin``. **Make sure you get the right version for your chosen version of PocketMine-MP** (see below).
-6. Find the download from link for your chosen version of ``PocketMine-MP.phar`` and ``start.sh`` from `here <https://github.com/pmmp/PocketMine-MP/releases>`__.
+6. Find the download link for your chosen version of ``PocketMine-MP.phar`` and ``start.sh`` from `here <https://github.com/pmmp/PocketMine-MP/releases>`__.
 7. Run ``curl -LO <link to PocketMine-MP.phar>``.
 8. Run ``curl -LO <link to start.sh>``.
 9. Run ``chmod +x ./start.sh``.
