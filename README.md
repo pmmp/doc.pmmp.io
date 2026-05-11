@@ -33,7 +33,7 @@ For Command Prompt (cmd.exe):
 For PowerShell:
 ```powershell
 .\venv\Scripts\Activate.ps1
----
+```
 
 ### 3. Install Dependencies
 Install the required Sphinx extensions and themes:
