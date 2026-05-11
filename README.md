@@ -9,7 +9,7 @@ The documentation is built and hosted by https://readthedocs.org/.
 
 To build and preview the documentation locally, follow these steps:
 
-### 1. Pre-requisites
+### 1. Prerequisites
 * **Python 3.9 or higher**
 * **pip** (Python package installer)
 
