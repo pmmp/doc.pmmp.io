@@ -5,14 +5,55 @@ This repository contains the source files for https://doc.pmmp.io/.
 
 The documentation is built and hosted by https://readthedocs.org/.
 
-Build local
------------
+## Local Development
 
-### Pre-requisites
-- python3
-- pip
-- install the requirements using `pip install -r requirements.txt`
+To build and preview the documentation locally, follow these steps:
 
-Once you've done the above, you can build the site by running `make html`.
-The HTML output files will be placed in the `./build` directory.
+### 1. Pre-requisites
+* **Python 3.9 or higher**
+* **pip** (Python package installer)
+
+### 2. Setup Environment (Recommended)
+It is highly recommended to use a virtual environment to avoid conflicts:
+
+# Linux/macOS
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+# Windows
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+Install the required Sphinx extensions and themes:
+```bash
+pip install -r requirements.txt
+```
+
+Note: Linux users may need to install 'make' (e.g., sudo apt install make)
+
+### 4. Build the Documentation
+
+Once the setup is complete, run the build command:
+
+# Linux/macOS
+
+```bash
+make html
+```
+
+# Windows
+
+```bash
+.\make.bat html
+```
+
+The generated HTML files will be located in the `./build/html` directory. Open index.html in your browser to view the site.
+
 
