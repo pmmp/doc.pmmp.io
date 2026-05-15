@@ -80,7 +80,7 @@ Some common ones include:
 +---------------------------------+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 
 2) Register your block in ``src/block/VanillaBlocksInputs.php``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This will create a ``VanillaBlocks::YOUR_BLOCK()`` static method
 automagically. In here, you’ll define properties like:
